@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHY 208 — Experimental Physics IV | Exam Bank</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --card: #1c2128;
+    --border: #30363d;
+    --accent: #f0a500;
+    --accent2: #3fb950;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --tag-a: #1f6feb;
+    --tag-b: #388bfd;
+    --highlight: rgba(240,165,0,0.15);
+    --radius: 8px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lora', Georgia, serif;
+    min-height: 100vh;
+    padding-bottom: 80px;
+  }
+
+  /* HEADER */
+  header {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2030 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 28px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+
+  .header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .course-tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  /* SEARCH */
+  .search-wrap {
+    position: relative;
+  }
+
+  .search-wrap svg {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  #searchInput {
+    width: 100%;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    padding: 12px 48px 12px 44px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  #searchInput:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(240,165,0,0.12);
+  }
+
+  #clearBtn {
+    display: none;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.15s;
+  }
+  #clearBtn:hover { color: var(--text); }
+
+  /* FILTERS */
+  .filters {
+    max-width: 900px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .filter-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    padding: 5px 14px;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 700; }
+
+  /* STATS BAR */
+  .stats-bar {
+    max-width: 900px;
+    margin: 12px auto 0;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  #resultCount { color: var(--accent2); font-weight: 700; }
+
+  /* MAIN */
+  main {
+    max-width: 900px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+  }
+
+  /* SECTION HEADER */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 0 16px;
+  }
+
+  .section-divider h2 {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .session-badge {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    color: var(--accent);
+    padding: 3px 8px;
+    white-space: nowrap;
+  }
+
+  /* QUESTION CARD */
+  .q-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.15s;
+    animation: slideIn 0.3s ease both;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-card:hover { border-color: rgba(240,165,0,0.4); }
+
+  .q-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .q-num {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    background: rgba(240,165,0,0.1);
+    border: 1px solid rgba(240,165,0,0.25);
+    border-radius: 4px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .q-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+    flex: 1;
+  }
+
+  .q-text mark {
+    background: var(--highlight);
+    color: var(--accent);
+    border-radius: 2px;
+    padding: 0 2px;
+  }
+
+  .q-toggle {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    font-size: 14px;
+    transition: all 0.2s;
+    margin-top: 2px;
+  }
+
+  .q-card.open .q-toggle {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #000;
+    transform: rotate(45deg);
+  }
+
+  /* OPTIONS */
+  .q-options {
+    display: none;
+    padding: 0 18px 18px 18px;
+    border-top: 1px solid var(--border);
+    margin-top: 0;
+  }
+
+  .q-card.open .q-options { display: block; }
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  @media (max-width: 600px) {
+    .options-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 16px; }
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .option:hover { border-color: var(--muted); background: var(--bg); }
+
+  .option.correct {
+    border-color: var(--accent2);
+    background: rgba(63,185,80,0.08);
+  }
+
+  .option.wrong {
+    border-color: #f85149;
+    background: rgba(248,81,73,0.06);
+    opacity: 0.6;
+  }
+
+  .opt-letter {
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  .option.correct .opt-letter { background: var(--accent2); border-color: var(--accent2); color: #000; }
+  .option.wrong .opt-letter { background: #f85149; border-color: #f85149; color: #fff; }
+
+  .answer-line {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(63,185,80,0.06);
+    border: 1px solid rgba(63,185,80,0.25);
+    border-radius: 6px;
+    font-family: 'Space Mono', monospace;
+    font-size: 13px;
+    color: var(--accent2);
+  }
+
+  /* Short answer */
+  .short-answer {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border: 1px dashed var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .short-answer strong { color: var(--accent2); font-style: normal; }
+
+  /* EMPTY STATE */
+  #emptyState {
+    display: none;
+    text-align: center;
+    padding: 64px 24px;
+  }
+
+  #emptyState .icon { font-size: 48px; margin-bottom: 16px; }
+  #emptyState p { color: var(--muted); font-size: 15px; }
+
+  /* SCROLL TOP */
+  #scrollTop {
+    position: fixed;
+    bottom: 28px;
+    right: 24px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(240,165,0,0.3);
+    transition: opacity 0.2s;
+  }
+  #scrollTop:hover { opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="course-tag">PHY 208 &nbsp;·&nbsp; Experimental Physics IV &nbsp;·&nbsp; Plateau State University</div>
+    <h1>Exam Question Bank</h1>
+    <p class="subtitle">2019/2020 &amp; 2020/2021 Sessions — Second Semester</p>
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search questions… e.g. zener, kirchhoff, CRO, resistor" autocomplete="off" spellcheck="false">
+      <button id="clearBtn" title="Clear search">×</button>
+    </div>
+  </div>
+</header>
+
+<div class="filters">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" data-filter="all">All Questions</button>
+  <button class="filter-btn" data-filter="2019">2019/2020</button>
+  <button class="filter-btn" data-filter="2020">2020/2021</button>
+  <button class="filter-btn" data-filter="mcq">MCQ</button>
+  <button class="filter-btn" data-filter="short">Short Answer</button>
+</div>
+
+<div class="stats-bar">
+  <span>Showing <span id="resultCount">0</span> questions</span>
+  <span id="searchHint"></span>
+</div>
+
+<main id="questionList">
+  <div id="emptyState">
+    <div class="icon">🔍</div>
+    <p>No questions match your search. Try different keywords.</p>
+  </div>
+</main>
+
+<button id="scrollTop" title="Back to top">↑</button>
+
+<script>
+const QUESTIONS = [
+  // ── 2019/2020 SESSION ──────────────────────────────────────────────
+  { id:1, session:"2019", type:"mcq", q:"Cells are connected in parallel in order to",
+    opts:["Increase the voltage available.","Reduce cost of wiring.","Increase the current available.","Reduce the time required to fully charge them after use."], ans:2 },
+  { id:2, session:"2019", type:"mcq", q:"A step-up transformer increases",
+    opts:["Voltage.","Current.","Power.","Frequency."], ans:0 },
+  { id:3, session:"2019", type:"mcq", q:"A network that does not have either voltage or current sources is called",
+    opts:["Active network.","Passive network.","Resistive network.","Dummy network."], ans:1 },
+  { id:4, session:"2019", type:"mcq", q:"Watt hour is the unit of",
+    opts:["Electric power.","Electric capacity.","Electric energy.","Electric charge."], ans:2 },
+  { id:5, session:"2019", type:"mcq", q:"The combined resistance of two equal resistors connected in parallel is equal to",
+    opts:["One half the resistance of one resistor.","Twice the resistance of one resistor.","Four times the resistance of one resistor.","One fourth the resistance of one resistor."], ans:0 },
+  { id:6, session:"2019", type:"mcq", q:"Thevenin's equivalent circuit consists of",
+    opts:["Series combination of R_Th, E_Th and R_L.","Series combination of R_Th and E_Th.","Parallel combination of R_Th and E_Th.","Parallel combination of R_Th, E_Th and R_L."], ans:1 },
+  { id:7, session:"2019", type:"mcq", q:"Superposition theorem can be applicable only to circuits having _______ elements.",
+    opts:["Non-linear","Passive","Resistive","Linear bilateral"], ans:3 },
+  { id:8, session:"2019", type:"mcq", q:"The Superposition theorem is essentially based on the concept of",
+    opts:["Duality.","Linearity.","Reciprocity.","Non-linearity."], ans:1 },
+  { id:9, session:"2019", type:"mcq", q:"The frequency of DC supply is _______.",
+    opts:["Zero.","16⅔ Hz.","50 Hz.","100 Hz."], ans:0 },
+  { id:10, session:"2019", type:"mcq", q:"Which of the following bulbs will have the least resistance?",
+    opts:["220V, 60W","220V, 100W","115V, 60W","115V, 100W"], ans:3 },
+  { id:11, session:"2019", type:"mcq", q:"The following components are all active components",
+    opts:["A resistor and an inductor.","A diode, a BJT and an FET.","A capacitor and an inductor.","An OpAmp, a BJT and thermionic triode."], ans:3 },
+  { id:12, session:"2019", type:"mcq", q:"The colour code of a resistor of nominal value 2.7 KΩ ± 10% is",
+    opts:["Red, Violet, Red and Silver.","Red, Violet, Yellow and Gold.","Red, Violet, Orange and Silver.","Red, Violet, Red and Gold."], ans:2 },
+  { id:13, session:"2019", type:"mcq", q:"The colour band sequence of a resistor is Grey, Blue, Gold, and Gold. The range in which its value must lie so as to satisfy the tolerance specified is between",
+    opts:["7.5 Ω and 8.5 Ω","3.12 KΩ and 5.22 KΩ","10.3 KΩ and 12.31 KΩ","8.17 Ω and 9.03 Ω"], ans:3 },
+  { id:14, session:"2019", type:"mcq", q:"When forward bias is applied to a junction diode, it",
+    opts:["Increases the potential barrier.","Decreases the potential barrier.","Reduces the majority-carrier current to zero.","Reduces the minority-carrier current to zero."], ans:1 },
+  { id:15, session:"2019", type:"mcq", q:"Which of the following components are all active components?",
+    opts:["A resistor and a capacitor.","A microphone, a LCD and a Thyratron.","An electric bulb, a transformer and a varactor diode.","An SCR, a vacuum diode and an LED."], ans:1 },
+  { id:16, session:"2019", type:"mcq", q:"If a change in base current does not change the collector current, the transistor amplifier is said to be",
+    opts:["Saturated.","Cut-off.","Critical.","Complemented."], ans:0 },
+  { id:17, session:"2019", type:"mcq", q:"The colour band sequence of a resistor is Yellow, Violet, Orange and Gold. The range in which its value must lie so as to satisfy the tolerance specified is between",
+    opts:["40 KΩ and 42.5 KΩ","44.65 Ω and 49.3 Ω","44.65 KΩ and 49.35 KΩ","43.25 KΩ and 45.22 KΩ"], ans:2 },
+  { id:18, session:"2019", type:"mcq", q:"Which of the following material has nearly zero temperature-coefficient of resistance?",
+    opts:["Carbon","Porcelain","Copper","Manganin"], ans:3 },
+  { id:19, session:"2019", type:"mcq", q:"A capacitor consists of two",
+    opts:["Insulators separated by a dielectric.","Conductors separated by an insulator.","Ceramic plates and one mica disc.","Silver-coated insulators."], ans:1 },
+  { id:20, session:"2019", type:"mcq", q:"The terminal point at which two or more branches of a circuit meet, or a point that is common to two circuits is called",
+    opts:["Loop","Junction","Node","All of the above."], ans:3 },
+  { id:21, session:"2019", type:"mcq", q:"On which law is the mesh analysis based?",
+    opts:["Nodal analysis","Kirchhoff's Voltage Law","Kirchhoff's Current Law","Thevenin's theorem"], ans:1 },
+  { id:22, session:"2019", type:"mcq", q:"Which theorem is useful when the amount of power, current or voltage drop in a particular component of a given circuit is desired?",
+    opts:["Superposition theorem","Reciprocity theorem","Millman's theorem","Thevenin's theorem"], ans:3 },
+  { id:23, session:"2019", type:"mcq", q:"Which theorem states that a linear two-terminal circuit can be replaced by an equivalent circuit consisting of a voltage source in series with a resistor?",
+    opts:["Norton's theorem","Thevenin's theorem","Reciprocity theorem","Maximum power transfer theorem."], ans:1 },
+  { id:24, session:"2019", type:"mcq", q:"Source transformation is the process of replacing a voltage source V_s in series with a resistor R by a current source in parallel with a resistor R, and vice versa.",
+    opts:["Input transformation","Equivalent circuit","Source transformation","Output transformation."], ans:2 },
+  { id:25, session:"2019", type:"mcq", q:"The decibel is a measure of",
+    opts:["Power","Voltage","Current","Power level."], ans:3 },
+  { id:26, session:"2019", type:"mcq", q:"A _______ is a device that can produce various patterns of voltage at a variety of frequencies and amplitudes.",
+    opts:["Function generator","Power supply unit","Signal generator","Multi-tester"], ans:0 },
+  { id:27, session:"2019", type:"mcq", q:"A _______ is a device that converts AC to DC, but the DC output is varying.",
+    opts:["Transformer","Rectifier","Regulator","CRO"], ans:1 },
+  { id:28, session:"2019", type:"mcq", q:"A _______ is a device that steps down high voltage AC mains to low voltage AC.",
+    opts:["Transformer","Rectifier","Regulator","CRO"], ans:0 },
+  { id:29, session:"2019", type:"mcq", q:"For what are the vertical and horizontal plates provided in a CRO?",
+    opts:["For synchronizing two types of deflections i.e. horizontal and vertical","For sweep time","For voltage regulation","To deflect the beam according to the input signal"], ans:3 },
+  { id:30, session:"2019", type:"mcq", q:"For what is a triggering circuit provided in a CRO?",
+    opts:["For synchronizing two types of deflection i.e. horizontal and vertical","For sweep time","For voltage regulation","To deflect the beam according to input signal"], ans:0 },
+  { id:31, session:"2019", type:"mcq", q:"When P-type semiconductor is connected to the positive terminal and N-type to the negative terminal of a voltage source, nearly zero resistance is offered to the flow of current. This is",
+    opts:["Forward biasing","Reverse biasing","Negative biasing","Positive biasing"], ans:0 },
+  { id:32, session:"2019", type:"mcq", q:"Which of the following is an application of a Zener diode?",
+    opts:["Voltage regulation","Meter protection","As a reference element","All of the above"], ans:3 },
+  { id:33, session:"2019", type:"mcq", q:"The voltage range availability of Zener diodes is",
+    opts:["0 to 24 V","2.4 V to 200 V","2 V to 100 V","0 to 200 V"], ans:1 },
+  { id:34, session:"2019", type:"mcq", q:"A multimeter (VOM) can be used for measuring",
+    opts:["DC quantities only","AC quantities only","Both DC as well as AC quantities","Power quantities only."], ans:2 },
+  { id:35, session:"2019", type:"mcq", q:"Zero adjust control is provided in an instrument for",
+    opts:["Correcting zero point","Changing the sensitivity","Tightening the moving component and casing","All of the above."], ans:0 },
+  { id:36, session:"2019", type:"mcq", q:"Transistor is a digital device that operates in",
+    opts:["Cut-off condition only","Saturation condition only","Both cut-off and saturation condition","Active region."], ans:2 },
+  { id:37, session:"2019", type:"mcq", q:"A binary number with four bits is called",
+    opts:["Byte","Nibble","Alpha","None of the above."], ans:1 },
+  { id:38, session:"2019", type:"mcq", q:"The largest number that can be represented by n bits is",
+    opts:["2ⁿ","2ⁿ − 1","2ⁿ + 1","2^(n−1)"], ans:1 },
+  { id:39, session:"2019", type:"mcq", q:"ICs cannot be used to fabricate",
+    opts:["Resistor","Capacitor","Varactor","Transformer."], ans:3 },
+  { id:40, session:"2019", type:"mcq", q:"The most important advantage of an IC is its",
+    opts:["Very low cost","Extremely high reliability","Extremely small size","Very small weight."], ans:1 },
+  { id:41, session:"2019", type:"mcq", q:"CRO experiment: The peak-to-peak vertical divisions occupied by the waveform were 4.6 and the VOLTS/DIV setting was 100 mV. Determine the peak-to-peak voltage.",
+    opts:["400 mV","460 mV","500 mV","520 mV"], ans:1 },
+  { id:42, session:"2019", type:"mcq", q:"CRO experiment: The horizontal divisions for two cycles occupied by the waveform were 8.8 and the TIME/DIV setting was 0.5 ms/DIV. Determine the frequency of the waveform.",
+    opts:["400 Hz","500 Hz","520 Hz","455 Hz"], ans:3 },
+  { id:43, session:"2019", type:"mcq", q:"The colour code of a resistor of nominal value 5 MΩ ± 20% is",
+    opts:["Violet, Orange, Red, Silver","Grey, Black, Green, None","Green, Black, Green, None","Green, Black, Yellow, None"], ans:2 },
+  { id:44, session:"2019", type:"mcq", q:"The transducer which converts sound to electrical energy is",
+    opts:["Loudspeaker","Earphone","Microphone","Piezo transducer."], ans:2 },
+  { id:45, session:"2019", type:"mcq", q:"One of the following transducers does NOT convert electrical energy to sound",
+    opts:["Loudspeaker","Buzzer","Microphone","Piezo transducer"], ans:2 },
+  { id:46, session:"2019", type:"mcq", q:"The device which is a very sensitive meter used to measure tiny currents, usually 1 mA or less is called",
+    opts:["Ohmmeter","Ammeter","Oscilloscope","Galvanometer"], ans:3 },
+  { id:47, session:"2019", type:"mcq", q:"An instrument used to display the shape of electrical signals and to measure voltage and time period is called",
+    opts:["Oscilloscope","Voltmeter","Galvanometer","Multi-meter"], ans:0 },
+  { id:48, session:"2019", type:"mcq", q:"The transducer which converts brightness (light) to resistance (an electrical property) is",
+    opts:["Thermistor","LDR","LED","Photodiode"], ans:1 },
+  { id:49, session:"2019", type:"mcq", q:"The component which only allows current to flow in one direction is",
+    opts:["LED","Diode","Zener diode","Photodiode"], ans:1 },
+  { id:50, session:"2019", type:"mcq", q:"Which gate has an output that can only be true when all its inputs are true?",
+    opts:["OR gate","NAND gate","AND gate","NOR Gate."], ans:2 },
+  { id:51, session:"2019", type:"mcq", q:"Why do we regulate voltage?",
+    opts:["To stabilize against thermal variation","To make constant the line voltage","To reduce changes in offset voltages","All of the above."], ans:3 },
+
+  // ── 2020/2021 SESSION ──────────────────────────────────────────────
+  // Section A — Short answer
+  { id:52, session:"2020", type:"short", q:"What three methods are used for finding resistance?",
+    answer:"The three main methods are: (1) Ohm's Law method — measure voltage and current then use R = V/I; (2) Wheatstone Bridge method — a null-balance circuit for precise measurement; (3) Ammeter-Voltmeter method — direct measurement using both instruments." },
+  { id:53, session:"2020", type:"short", q:"Capacitor stores which type of energy?",
+    answer:"A capacitor stores electrical potential energy (electrostatic energy) in the electric field between its plates." },
+  { id:54, session:"2020", type:"short", q:"Inductor stores which type of energy?",
+    answer:"An inductor stores energy in the form of magnetic energy (in its magnetic field), given by E = ½LI²." },
+  { id:55, session:"2020", type:"short", q:"Solid state electronics arises from the unique properties of what?",
+    answer:"Solid state electronics arises from the unique properties of semiconductors (primarily silicon and germanium), whose electrical conductivity lies between that of conductors and insulators." },
+  { id:56, session:"2020", type:"short", q:"When p-type semiconductor is connected to the negative terminal of the battery and n-type material is connected to the positive terminal, the diode is called what?",
+    answer:"This configuration is called reverse bias. In reverse bias, the depletion layer widens and very little current (only minority carrier leakage current) flows." },
+  { id:57, session:"2020", type:"short", q:"A process in which two or more metal items are joined together by melting and flowing a filler is called what?",
+    answer:"This process is called soldering (specifically, the description fits soft soldering or brazing depending on the filler metal temperature). In electronics, it is most commonly referred to as soldering." },
+  { id:58, session:"2020", type:"short", q:"A network containing generators or energy sources along with other elements is known as what?",
+    answer:"A network containing energy sources (voltage or current generators) is known as an Active network." },
+  { id:59, session:"2020", type:"short", q:"A terminal of any branch of a network, or a terminal common to two or more branches, is known as a what?",
+    answer:"Such a terminal is known as a Node. A node is a junction point in a circuit where two or more circuit elements meet." },
+  { id:60, session:"2020", type:"short", q:"What are great for connecting components together to test a circuit without the need for soldering?",
+    answer:"Breadboards (also called solderless breadboards or protoboards) are ideal for this purpose — they allow components to be inserted and removed easily without soldering." },
+  { id:61, session:"2020", type:"short", q:"On which law is the mesh analysis based?",
+    answer:"Mesh analysis is based on Kirchhoff's Voltage Law (KVL), which states that the algebraic sum of all voltages around any closed loop in a circuit is zero." },
+
+  // Section B — Symbol identification (describe what to sketch)
+  { id:62, session:"2020", type:"short", q:"It is a complement of AND gate. The output is low only when both the inputs are high, otherwise it is high. [Sketch the electrical circuit symbol]",
+    answer:"This describes a NAND gate. Symbol: Draw an AND gate shape (D-shape body with flat left side) with a small bubble (circle) at the output terminal. Inputs on the left, output on the right with the inversion bubble." },
+  { id:63, session:"2020", type:"short", q:"This gate implements negation of EXOR logic. The output is high only if the two inputs are identical. [Sketch the electrical circuit symbol]",
+    answer:"This describes an XNOR gate (Exclusive NOR). Symbol: Draw an EXOR gate shape (curved body with an extra arc on the input side) with a small inversion bubble at the output." },
+  { id:64, session:"2020", type:"short", q:"It is used to measure voltage with respect to time for signals. [Sketch the electrical circuit symbol]",
+    answer:"This describes an Oscilloscope (CRO). Symbol: Draw a rectangle representing the CRO casing, with a display screen depicted inside. Show probe inputs at the front." },
+  { id:65, session:"2020", type:"short", q:"This is also an audio device. Converts the electrical signal to sound signal in an amplified version. [Sketch the electrical circuit symbol]",
+    answer:"This describes a Loudspeaker/Speaker. Symbol: A triangle pointing right with a trapezoid shape attached to its right side representing the cone. The electrical terminals are on the left." },
+  { id:66, session:"2020", type:"short", q:"A transducer which converts brightness (light) to resistance (an electrical property). They are also called photo resistors. [Sketch the electrical circuit symbol]",
+    answer:"This describes an LDR (Light Dependent Resistor / Photoresistor). Symbol: Draw the standard resistor symbol (rectangle or zigzag) with two inward-pointing arrows above it representing incident light." },
+  { id:67, session:"2020", type:"short", q:"These capacitors are used to control the capacitance by using a screwdriver or similar tools. It is designed to be set when the circuit is made and then left without further adjustment. [Sketch the electrical circuit symbol]",
+    answer:"This describes a Trimmer / Preset Capacitor (variable capacitor). Symbol: Draw the standard capacitor symbol (two parallel lines) with an arrow through it indicating variability, or a curved arrow indicating adjustment." },
+  { id:68, session:"2020", type:"short", q:"A 2-way changeover switch that directs the flow of current to one of two routes according to its position. Some have a central OFF position (ON-OFF-ON). [Sketch the electrical circuit symbol]",
+    answer:"This describes a SPDT (Single Pole Double Throw) switch. Symbol: Draw a single pole with two output terminals and a movable arm that can connect to either terminal." },
+  { id:69, session:"2020", type:"short", q:"In complex circuit diagrams, some wires may not connect with others. In this case, bridging is commonly utilized. [Sketch the electrical circuit symbol]",
+    answer:"This describes a wire bridge / non-connecting crossover. Symbol: Two lines crossing each other with a small semi-circular arc (bridge) on one line showing they do NOT connect at the crossing point." },
+
+  // Section C — MCQ 2020/2021
+  { id:70, session:"2020", type:"mcq", q:"A network that does not have either voltage or current sources is called",
+    opts:["Active network","Passive network","Resistive network","Dummy network."], ans:1 },
+  { id:71, session:"2020", type:"mcq", q:"Watt hour is the unit of",
+    opts:["Electric power","Electric capacity","Electric energy","Electric charge."], ans:2 },
+  { id:72, session:"2020", type:"mcq", q:"The forward voltage at which the barrier is removed and current through the junction starts increasing rapidly is called",
+    opts:["Knee voltage","Breakdown voltage","Reverse voltage","DC Voltage"], ans:0 },
+  { id:73, session:"2020", type:"mcq", q:"Breakdown voltage is defined as the voltage at which the barrier is removed and inverse current through the junction starts increasing rapidly and can damage the diode.",
+    opts:["Knee voltage","AC voltage","Reverse voltage","DC Voltage"], ans:2 },
+  { id:74, session:"2020", type:"mcq", q:"Solid-state devices are also called",
+    opts:["Active devices","Passive devices","Semiconductors","Conductors"], ans:2 },
+  { id:75, session:"2020", type:"mcq", q:"In reverse bias, we may assume that the diode current is _______ (if it is not a Zener diode)",
+    opts:["Zero","Unity","0.7","0.3"], ans:0 },
+  { id:76, session:"2020", type:"mcq", q:"What is the current in Fig. 1.1 (5V source, 2KΩ resistor), if the diode is a silicon type?",
+    opts:["4.5 mA","2.15 mA","0 mA","−2.5 mA"], ans:1 },
+  { id:77, session:"2020", type:"mcq", q:"What is the current in Fig. 1.2 (12V source, 3KΩ resistor), if the diode is a silicon type?",
+    opts:["5 mA","4 mA","0 mA","−3 mA"], ans:1 },
+  { id:78, session:"2020", type:"mcq", q:"In Fig. 1.3 (12V source, R1=2KΩ, R2=4KΩ with a diode), what will be the current in R2 if we change the source voltage from 12V to 5V?",
+    opts:["The current will stay the same as before.","The current will be lower than before.","The current will be higher than before.","The current will be zero."], ans:1 },
+  { id:79, session:"2020", type:"mcq", q:"What is the voltage on R2 in Fig. 1.4 (12V source, R1=2KΩ, R2=4KΩ, silicon diode)?",
+    opts:["12V","0.7V","4V","8V"], ans:3 },
+  { id:80, session:"2020", type:"mcq", q:"The device which is a sensitive meter used to measure tiny current, usually 1 mA or less is called",
+    opts:["Ohmmeter","Loudspeaker","Microphone","Galvanometer"], ans:3 },
+  { id:81, session:"2020", type:"mcq", q:"The decibel is a measure of",
+    opts:["Power","Voltage","Current","Power level"], ans:3 },
+  { id:82, session:"2020", type:"mcq", q:"The colour band sequence of a resistor is Grey, Blue, Red and Silver. The range in which its value must lie so as to satisfy the tolerance specified is between",
+    opts:["7.74 KΩ and 9.46 Ω","7.8 KΩ and 9.5 KΩ","8.7 KΩ and 9.5 KΩ","9.5 Ω and 7.7 Ω"], ans:1 },
+  { id:83, session:"2020", type:"mcq", q:"The colour code of a resistor of nominal value 2.7 KΩ ± 0.25% is",
+    opts:["Red, Violet, Orange and Silver","Red, Violet, Orange and Green","Red, Violet, Orange and Blue","Red, Violet, Orange and Red"], ans:2 },
+  { id:84, session:"2020", type:"mcq", q:"The colour code of a resistor of nominal value 920 Ω ± 0.1% is",
+    opts:["White, Red, Brown and Gold","White, Red, Red and Violet","White, Red, Brown and Violet","White, Red, Brown and Gray"], ans:3 },
+  { id:85, session:"2020", type:"mcq", q:"The colour band sequence of a resistor is Orange, Green, Brown and Red. The range in which its value must lie so as to satisfy the tolerance specified is between",
+    opts:["348.25 Ω and 351.75 Ω","343 Ω and 357 Ω","332.5 Ω and 367.5 Ω","315 Ω and 385 Ω"], ans:1 },
+  { id:86, session:"2020", type:"mcq", q:"A _______ is a device that can produce various patterns of voltage at a variety of frequencies and amplitudes.",
+    opts:["Function generator","Power supply unit","Multi-tester","Signal generator"], ans:0 },
+  { id:87, session:"2020", type:"mcq", q:"An instrument used to display the shape of electrical signals and to measure their voltage and time period is called",
+    opts:["Function generator","Signal generator","Piezo transducer","Oscilloscope"], ans:3 },
+  { id:88, session:"2020", type:"mcq", q:"Zero adjust control is provided in an instrument for",
+    opts:["Standard error analysis","Correcting zero point","Changing the sensitivity","All of the above"], ans:1 },
+  { id:89, session:"2020", type:"mcq", q:"To check an ordinary silicon forward conduction mode of diode using a digital multimeter, the display should show a voltage between _______ to confirm the diode is healthy.",
+    opts:["0.5V to 0.7V","0.6V to 0.8V","0.6V to 0.7V","0.5V to 0.8V"], ans:0 },
+  { id:90, session:"2020", type:"mcq", q:"Part number of a logic gate IC SN74LS08J — which of the following describes its characteristics?",
+    opts:["The prefix: the manufacturer's code","Core part number: determines technology (TTL or CMOS), device series and function","The trailing suffix letter(s): code used by manufacturers to designate the package (DIP)","All of the above"], ans:3 },
+  { id:91, session:"2020", type:"mcq", q:"Where are logic gates used?",
+    opts:["Flip-Flops","Registers","Counters / sequential logic circuits","Both A, B, and C"], ans:3 },
+];
+
+// ── Render ──────────────────────────────────────────────────────────
+let activeFilter = "all";
+
+function highlight(text, term) {
+  if (!term) return escHtml(text);
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return escHtml(text).replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function letterLabel(i) { return String.fromCharCode(65+i); }
+
+function renderCard(q, term) {
+  const hl = (t) => highlight(t, term);
+  if (q.type === "mcq") {
+    const optHtml = q.opts.map((o, i) => `
+      <div class="option ${i === q.ans ? 'correct' : 'wrong'}" data-letter="${letterLabel(i)}">
+        <span class="opt-letter">${letterLabel(i)}</span>
+        <span>${hl(o)}</span>
+      </div>`).join('');
+    return `
+    <div class="q-card" id="qc-${q.id}">
+      <div class="q-header" onclick="toggleCard(${q.id})">
+        <span class="q-num">Q${q.id}</span>
+        <span class="q-text">${hl(q.q)}</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="q-options">
+        <div class="options-grid">${optHtml}</div>
+        <div class="answer-line">✓ Correct answer: ${letterLabel(q.ans)}. ${escHtml(q.opts[q.ans])}</div>
+      </div>
+    </div>`;
+  } else {
+    return `
+    <div class="q-card" id="qc-${q.id}">
+      <div class="q-header" onclick="toggleCard(${q.id})">
+        <span class="q-num">Q${q.id}</span>
+        <span class="q-text">${hl(q.q)}</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="q-options">
+        <div class="short-answer"><strong>Answer:</strong><br>${escHtml(q.answer)}</div>
+      </div>
+    </div>`;
+  }
+}
+
+function render() {
+  const term = document.getElementById('searchInput').value.trim().toLowerCase();
+  const list = document.getElementById('questionList');
+  const empty = document.getElementById('emptyState');
+  const count = document.getElementById('resultCount');
+
+  const filtered = QUESTIONS.filter(q => {
+    const matchFilter =
+      activeFilter === "all" ||
+      (activeFilter === "2019" && q.session === "2019") ||
+      (activeFilter === "2020" && q.session === "2020") ||
+      (activeFilter === "mcq" && q.type === "mcq") ||
+      (activeFilter === "short" && q.type === "short");
+    if (!matchFilter) return false;
+    if (!term) return true;
+    const searchable = [q.q, ...(q.opts||[]), q.answer||''].join(' ').toLowerCase();
+    return searchable.includes(term);
+  });
+
+  // Clear cards (keep emptyState)
+  Array.from(list.querySelectorAll('.q-card, .section-divider')).forEach(e => e.remove());
+
+  if (filtered.length === 0) {
+    empty.style.display = 'block';
+    count.textContent = '0';
+    return;
+  }
+  empty.style.display = 'none';
+  count.textContent = filtered.length;
+
+  // Group by session
+  const sess19 = filtered.filter(q => q.session === "2019");
+  const sess20 = filtered.filter(q => q.session === "2020");
+
+  let html = '';
+  if (sess19.length) {
+    html += `<div class="section-divider"><h2>Session</h2><div class="divider-line"></div><span class="session-badge">2019/2020</span></div>`;
+    html += sess19.map(q => renderCard(q, term)).join('');
+  }
+  if (sess20.length) {
+    html += `<div class="section-divider"><h2>Session</h2><div class="divider-line"></div><span class="session-badge">2020/2021</span></div>`;
+    html += sess20.map(q => renderCard(q, term)).join('');
+  }
+  list.insertAdjacentHTML('beforeend', html);
+}
+
+function toggleCard(id) {
+  const card = document.getElementById(`qc-${id}`);
+  card.classList.toggle('open');
+}
+
+// Search
+const input = document.getElementById('searchInput');
+const clearBtn = document.getElementById('clearBtn');
+input.addEventListener('input', () => {
+  clearBtn.style.display = input.value ? 'flex' : 'none';
+  render();
+});
+clearBtn.addEventListener('click', () => {
+  input.value = '';
+  clearBtn.style.display = 'none';
+  render();
+  input.focus();
+});
+
+// Filters
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+// Scroll top
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+  scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+});
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Init
+render();
+</script>
+</body>
+</html>
