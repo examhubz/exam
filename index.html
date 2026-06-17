@@ -1,822 +1,697 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESP 311 – Entrepreneurship Skill Program | PSU Bokkos</title>
 
-<!-- ── Primary Meta Tags ── -->
-<title>PHY 208 — Experimental Physics IV | Exam PQ | PLASU Bokkos</title>
-<meta name="title" content="PHY 208 Experimental Physics IV — Exam Question Bank">
-<meta name="description" content="Interactive exam question bank for PHY 208 (Experimental Physics IV) at Plateau State University, Bokkos. Covers 2019/2020 and 2020/2021 second-semester examinations. Topics include circuit theorems, semiconductor devices, resistor colour codes, CRO, logic gates, transducers and more.">
-<meta name="keywords" content="PHY 208, Experimental Physics IV, Plateau State University, Bokkos, PSU, Physics exam, circuit theorems, Thevenin, Norton, Kirchhoff, semiconductor, diode, transistor, resistor colour code, CRO, oscilloscope, logic gates, NAND, AND, OR, transducer, LDR, Zener diode, exam questions, Nigeria university">
-<meta name="author" content="Department of Physics, Faculty of Natural Sciences, Plateau State University Bokkos">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0d1117">
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="ESP 311 Entrepreneurship Skill Program – End-of-Course Training Exam Q&A Reference for the 2024/2025 Session at Plateau State University (PSU) Bokkos. Covers Entrepreneurship Studies and Photography & Videography." />
+  <meta name="keywords" content="ESP 311, Entrepreneurship, PSU Bokkos, Plateau State University, Photography, Videography, Exam Questions, Entrepreneurship Development Centre" />
+  <meta name="author" content="Plateau State University Bokkos – Entrepreneurship Development Centre" />
+  <meta property="og:title" content="ESP 311 Entrepreneurship Skill Program | PSU Bokkos" />
+  <meta property="og:description" content="Interactive Q&A guide for the ESP 311 End-of-Course Training Exam – 2024/2025 Session." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1a3a5c" />
 
-<!-- ── Open Graph / Facebook ── -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="PHY 208 Experimental Physics IV — Exam Bank | PSU Bokkos">
-<meta property="og:description" content="Searchable exam question bank for PHY 208 at Plateau State University, Bokkos. Browse and search 90+ questions with answers from the 2019/2020 and 2020/2021 second-semester examinations.">
-<meta property="og:locale" content="en_NG">
-<meta property="og:site_name" content="PSU Bokkos — Physics Department">
+  <!-- Favicon (SVG – entrepreneurship/education theme) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a3a5c'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-size='38' font-family='serif'>🎓</text></svg>" />
 
-<!-- ── Twitter Card ── -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHY 208 Experimental Physics IV — Exam Bank | PSU Bokkos">
-<meta name="twitter:description" content="Searchable exam question bank for PHY 208 at Plateau State University, Bokkos. Browse 90+ questions with answers across two academic sessions.">
+  <style>
+    /* ── Design Tokens ───────────────────────────────────────── */
+    :root {
+      --navy:     #1a3a5c;
+      --gold:     #c9922a;
+      --gold-lt:  #f5d78e;
+      --cream:    #faf8f3;
+      --white:    #ffffff;
+      --text:     #1e2533;
+      --muted:    #5e6b7d;
+      --border:   #dde3ec;
+      --tag-a:    #1a3a5c;
+      --tag-b:    #8a3520;
+      --radius:   10px;
+      --shadow:   0 2px 14px rgba(26,58,92,.10);
+    }
 
-<!-- ── Academic / Dublin Core ── -->
-<meta name="DC.title" content="PHY 208 Experimental Physics IV Examination Question Bank">
-<meta name="DC.creator" content="Department of Physics, Plateau State University Bokkos">
-<meta name="DC.subject" content="Experimental Physics; Electronics; Circuit Analysis; Semiconductor Devices">
-<meta name="DC.description" content="Second Semester examination questions for PHY 208 (Credit Unit: 1) covering 2019/2020 and 2020/2021 academic sessions.">
-<meta name="DC.publisher" content="Plateau State University, Bokkos, Plateau State, Nigeria">
-<meta name="DC.language" content="en">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
+    /* ── Reset ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.7;
+    }
 
-<!-- ── Favicon — Atom / Physics SVG icon ── -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2' transform='rotate(60 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2' transform='rotate(120 32 32)'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%233fb950'/%3E%3Ccircle cx='54' cy='32' r='2.5' fill='%23f0a500'/%3E%3Ccircle cx='43' cy='13.3' r='2.5' fill='%23f0a500'/%3E%3C/svg%3E">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230d1117'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2' transform='rotate(60 32 32)'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='8' fill='none' stroke='%23f0a500' stroke-width='2' transform='rotate(120 32 32)'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%233fb950'/%3E%3Ccircle cx='54' cy='32' r='2.5' fill='%23f0a500'/%3E%3Ccircle cx='43' cy='13.3' r='2.5' fill='%23f0a500'/%3E%3C/svg%3E">
+    /* ── Header / Hero ──────────────────────────────────────── */
+    header {
+      background: linear-gradient(135deg, var(--navy) 60%, #2a5a8c 100%);
+      color: var(--white);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 1px,
+        transparent 1px, transparent 18px
+      );
+      pointer-events: none;
+    }
+    .header-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: .72rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .3rem .85rem;
+      border-radius: 20px;
+      margin-bottom: .9rem;
+    }
+    header h1 {
+      font-size: clamp(1.55rem, 4vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -.01em;
+      line-height: 1.2;
+      margin-bottom: .45rem;
+    }
+    header h1 span { color: var(--gold-lt); }
+    header p.sub {
+      font-size: .95rem;
+      opacity: .82;
+      font-style: italic;
+      font-family: 'Arial', sans-serif;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #0d1117;
-    --surface: #161b22;
-    --card: #1c2128;
-    --border: #30363d;
-    --accent: #f0a500;
-    --accent2: #3fb950;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --tag-a: #1f6feb;
-    --tag-b: #388bfd;
-    --highlight: rgba(240,165,0,0.15);
-    --radius: 8px;
-  }
+    /* ── Sticky Search Bar ──────────────────────────────────── */
+    .search-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 2px solid var(--gold);
+      padding: .85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    }
+    .search-bar svg { flex-shrink: 0; color: var(--muted); }
+    .search-bar input {
+      flex: 1;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: .6rem 1rem;
+      font-size: 1rem;
+      font-family: 'Arial', sans-serif;
+      outline: none;
+      color: var(--text);
+      background: var(--cream);
+      transition: border-color .2s;
+    }
+    .search-bar input:focus { border-color: var(--gold); background: var(--white); }
+    .search-bar input::placeholder { color: var(--muted); font-style: italic; }
+    #result-count {
+      font-size: .82rem;
+      font-family: 'Arial', sans-serif;
+      color: var(--muted);
+      white-space: nowrap;
+    }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── Section Filters ────────────────────────────────────── */
+    .filters {
+      display: flex;
+      gap: .6rem;
+      padding: 1rem 1.5rem;
+      background: var(--white);
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-btn {
+      border: none;
+      padding: .35rem .85rem;
+      border-radius: 20px;
+      font-size: .82rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .18s;
+      background: var(--border);
+      color: var(--muted);
+    }
+    .filter-btn.active-all  { background: var(--navy); color: var(--white); }
+    .filter-btn.active-a    { background: var(--tag-a); color: var(--white); }
+    .filter-btn.active-b    { background: var(--tag-b); color: var(--white); }
 
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Lora', Georgia, serif;
-    min-height: 100vh;
-    padding-bottom: 80px;
-  }
+    /* ── Main Content ────────────────────────────────────────── */
+    main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
 
-  /* HEADER */
-  header {
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a2030 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 32px 24px 28px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(12px);
-  }
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin: 2rem 0 1rem;
+    }
+    .section-label h2 {
+      font-size: 1.05rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--navy);
+    }
+    .section-label .pill {
+      font-size: .7rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .22rem .65rem;
+      border-radius: 20px;
+    }
+    .pill-a { background: var(--navy); color: var(--white); }
+    .pill-b { background: var(--tag-b); color: var(--white); }
+    .section-label hr { flex: 1; border: none; border-top: 1.5px solid var(--border); }
 
-  .header-inner {
-    max-width: 900px;
-    margin: 0 auto;
-  }
+    /* ── Q&A Card ────────────────────────────────────────────── */
+    .qa-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+      border-left: 4px solid transparent;
+      overflow: hidden;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .qa-card.section-a { border-left-color: var(--navy); }
+    .qa-card.section-b { border-left-color: var(--tag-b); }
+    .qa-card:hover { box-shadow: 0 4px 22px rgba(26,58,92,.16); }
 
-  .course-tag {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
+    .qa-question {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: .9rem 1.2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .q-num {
+      flex-shrink: 0;
+      width: 1.9rem;
+      height: 1.9rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .75rem;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      margin-top: .1rem;
+    }
+    .section-a .q-num { background: #e8eef5; color: var(--navy); }
+    .section-b .q-num { background: #f5ebe8; color: var(--tag-b); }
 
-  h1 {
-    font-family: 'Space Mono', monospace;
-    font-size: clamp(18px, 3vw, 26px);
-    font-weight: 700;
-    color: var(--text);
-    line-height: 1.2;
-    margin-bottom: 4px;
-  }
+    .q-text {
+      flex: 1;
+      font-size: .97rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .q-toggle {
+      flex-shrink: 0;
+      font-size: 1.3rem;
+      color: var(--muted);
+      transition: transform .22s;
+      line-height: 1;
+      align-self: center;
+    }
+    .qa-card.open .q-toggle { transform: rotate(45deg); }
 
-  .subtitle {
-    font-size: 13px;
-    color: var(--muted);
-    font-style: italic;
-    margin-bottom: 20px;
-  }
+    .qa-answer {
+      display: none;
+      padding: 0 1.2rem 1.1rem 3.7rem;
+      font-size: .93rem;
+      color: var(--muted);
+      line-height: 1.75;
+      font-family: 'Arial', sans-serif;
+    }
+    .qa-card.open .qa-answer { display: block; }
+    .qa-answer strong { color: var(--text); font-weight: 600; }
+    .qa-answer ul { margin: .4rem 0 .4rem 1.2rem; }
+    .qa-answer li { margin-bottom: .25rem; }
 
-  /* SEARCH */
-  .search-wrap {
-    position: relative;
-  }
+    /* ── highlight match ─────────────────────────────────────── */
+    mark { background: #fff3b0; color: var(--text); border-radius: 3px; padding: 0 1px; }
 
-  .search-wrap svg {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--muted);
-    pointer-events: none;
-  }
+    /* ── No results ──────────────────────────────────────────── */
+    #no-results {
+      display: none;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+      font-family: 'Arial', sans-serif;
+      font-style: italic;
+    }
+    #no-results span { font-size: 2.5rem; display: block; margin-bottom: .5rem; }
 
-  #searchInput {
-    width: 100%;
-    background: var(--card);
-    border: 1.5px solid var(--border);
-    border-radius: var(--radius);
-    color: var(--text);
-    font-family: 'Space Mono', monospace;
-    font-size: 14px;
-    padding: 12px 48px 12px 44px;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-
-  #searchInput:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(240,165,0,0.12);
-  }
-
-  #clearBtn {
-    display: none;
-    position: absolute;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 1;
-    padding: 0;
-    transition: color 0.15s;
-  }
-  #clearBtn:hover { color: var(--text); }
-
-  /* FILTERS */
-  .filters {
-    max-width: 900px;
-    margin: 16px auto 0;
-    padding: 0 24px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .filter-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-right: 4px;
-  }
-
-  .filter-btn {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    color: var(--muted);
-    cursor: pointer;
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    padding: 5px 14px;
-    transition: all 0.15s;
-    white-space: nowrap;
-  }
-
-  .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #000; font-weight: 700; }
-
-  /* STATS BAR */
-  .stats-bar {
-    max-width: 900px;
-    margin: 12px auto 0;
-    padding: 0 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  #resultCount { color: var(--accent2); font-weight: 700; }
-
-  /* MAIN */
-  main {
-    max-width: 900px;
-    margin: 24px auto 0;
-    padding: 0 24px;
-  }
-
-  /* SECTION HEADER */
-  .section-divider {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 32px 0 16px;
-  }
-
-  .section-divider h2 {
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--muted);
-    white-space: nowrap;
-  }
-
-  .divider-line {
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-
-  .session-badge {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    font-family: 'Space Mono', monospace;
-    font-size: 10px;
-    color: var(--accent);
-    padding: 3px 8px;
-    white-space: nowrap;
-  }
-
-  /* QUESTION CARD */
-  .q-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    margin-bottom: 12px;
-    overflow: hidden;
-    transition: border-color 0.2s, transform 0.15s;
-    animation: slideIn 0.3s ease both;
-  }
-
-  @keyframes slideIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  .q-card:hover { border-color: rgba(240,165,0,0.4); }
-
-  .q-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 16px 18px;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .q-num {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent);
-    background: rgba(240,165,0,0.1);
-    border: 1px solid rgba(240,165,0,0.25);
-    border-radius: 4px;
-    padding: 3px 8px;
-    white-space: nowrap;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .q-text {
-    font-size: 15px;
-    line-height: 1.6;
-    color: var(--text);
-    flex: 1;
-  }
-
-  .q-text mark {
-    background: var(--highlight);
-    color: var(--accent);
-    border-radius: 2px;
-    padding: 0 2px;
-  }
-
-  .q-toggle {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-size: 14px;
-    transition: all 0.2s;
-    margin-top: 2px;
-  }
-
-  .q-card.open .q-toggle {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #000;
-    transform: rotate(45deg);
-  }
-
-  /* OPTIONS */
-  .q-options {
-    display: none;
-    padding: 0 18px 18px 18px;
-    border-top: 1px solid var(--border);
-    margin-top: 0;
-  }
-
-  .q-card.open .q-options { display: block; }
-
-  .options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-top: 14px;
-  }
-
-  @media (max-width: 600px) {
-    .options-grid { grid-template-columns: 1fr; }
-    h1 { font-size: 16px; }
-  }
-
-  .option {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: 6px;
-    padding: 10px 12px;
-    cursor: pointer;
-    transition: all 0.15s;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .option:hover { border-color: var(--muted); background: var(--bg); }
-
-  .option.correct {
-    border-color: var(--accent2);
-    background: rgba(63,185,80,0.08);
-  }
-
-  .option.wrong {
-    border-color: #f85149;
-    background: rgba(248,81,73,0.06);
-    opacity: 0.6;
-  }
-
-  .opt-letter {
-    font-family: 'Space Mono', monospace;
-    font-size: 12px;
-    font-weight: 700;
-    min-width: 22px;
-    height: 22px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--muted);
-  }
-
-  .option.correct .opt-letter { background: var(--accent2); border-color: var(--accent2); color: #000; }
-  .option.wrong .opt-letter { background: #f85149; border-color: #f85149; color: #fff; }
-
-  .answer-line {
-    margin-top: 14px;
-    padding: 10px 14px;
-    background: rgba(63,185,80,0.06);
-    border: 1px solid rgba(63,185,80,0.25);
-    border-radius: 6px;
-    font-family: 'Space Mono', monospace;
-    font-size: 13px;
-    color: var(--accent2);
-  }
-
-  /* Short answer */
-  .short-answer {
-    margin-top: 14px;
-    padding: 12px 16px;
-    background: var(--surface);
-    border: 1px dashed var(--border);
-    border-radius: 6px;
-    font-size: 14px;
-    color: var(--muted);
-    font-style: italic;
-    line-height: 1.6;
-  }
-
-  .short-answer strong { color: var(--accent2); font-style: normal; }
-
-  /* EMPTY STATE */
-  #emptyState {
-    display: none;
-    text-align: center;
-    padding: 64px 24px;
-  }
-
-  #emptyState .icon { font-size: 48px; margin-bottom: 16px; }
-  #emptyState p { color: var(--muted); font-size: 15px; }
-
-  /* SCROLL TOP */
-  #scrollTop {
-    position: fixed;
-    bottom: 28px;
-    right: 24px;
-    background: var(--accent);
-    color: #000;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
-    cursor: pointer;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(240,165,0,0.3);
-    transition: opacity 0.2s;
-  }
-  #scrollTop:hover { opacity: 0.85; }
-</style>
+    /* ── Footer ──────────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--navy);
+      color: rgba(255,255,255,.55);
+      font-size: .8rem;
+      font-family: 'Arial', sans-serif;
+    }
+    footer strong { color: var(--gold-lt); }
+  </style>
 </head>
 <body>
 
+<!-- ── Header ─────────────────────────────────────────────────── -->
 <header>
-  <div class="header-inner">
-    <div class="course-tag">PHY 208 &nbsp;·&nbsp; Experimental Physics IV &nbsp;·&nbsp; Plateau State University</div>
-    <h1>Exam Question Bank</h1>
-    <p class="subtitle">2019/2020 &amp; 2020/2021 Sessions — Second Semester</p>
-    <div class="search-wrap">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Search questions… e.g. zener, kirchhoff, CRO, resistor" autocomplete="off" spellcheck="false">
-      <button id="clearBtn" title="Clear search">×</button>
-    </div>
-  </div>
+  <div class="header-badge">2024 / 2025 Session</div>
+  <h1>ESP 311 – <span>Entrepreneurship</span><br>Skill Program</h1>
+  <p class="sub">End-of-Course Training Exam · Plateau State University Bokkos</p>
 </header>
 
+<!-- ── Search ─────────────────────────────────────────────────── -->
+<div class="search-bar">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <input type="search" id="search" placeholder="Search questions or keywords…" autocomplete="off" />
+  <span id="result-count"></span>
+</div>
+
+<!-- ── Section Filters ────────────────────────────────────────── -->
 <div class="filters">
-  <span class="filter-label">Filter:</span>
-  <button class="filter-btn active" data-filter="all">All Questions</button>
-  <button class="filter-btn" data-filter="2019">2019/2020</button>
-  <button class="filter-btn" data-filter="2020">2020/2021</button>
-  <button class="filter-btn" data-filter="mcq">MCQ</button>
-  <button class="filter-btn" data-filter="short">Short Answer</button>
+  <button class="filter-btn active-all" data-filter="all">All Questions</button>
+  <button class="filter-btn" data-filter="a">Section A – Entrepreneurship</button>
+  <button class="filter-btn" data-filter="b">Section B – Photography &amp; Videography</button>
 </div>
 
-<div class="stats-bar">
-  <span>Showing <span id="resultCount">0</span> questions</span>
-  <span id="searchHint"></span>
-</div>
+<!-- ── Main ───────────────────────────────────────────────────── -->
+<main>
 
-<main id="questionList">
-  <div id="emptyState">
-    <div class="icon">🔍</div>
-    <p>No questions match your search. Try different keywords.</p>
+  <!-- SECTION A -->
+  <div class="section-label" data-group="a">
+    <span class="pill pill-a">Section A</span>
+    <h2>Entrepreneurship Studies</h2>
+    <hr>
   </div>
+
+  <div id="qa-container"></div>
+  <div id="no-results"><span>🔍</span>No questions match your search.</div>
+
 </main>
 
-<button id="scrollTop" title="Back to top">↑</button>
+<footer>
+  <strong>Plateau State University Bokkos</strong> · Entrepreneurship Development Centre ·
+  ESP 311 – Entrepreneurship Skill Program
+</footer>
 
 <script>
-const QUESTIONS = [
-  // ── 2019/2020 SESSION ──────────────────────────────────────────────
-  { id:1, session:"2019", type:"mcq", q:"Cells are connected in parallel in order to",
-    opts:["Increase the voltage available.","Reduce cost of wiring.","Increase the current available.","Reduce the time required to fully charge them after use."], ans:2 },
-  { id:2, session:"2019", type:"mcq", q:"A step-up transformer increases",
-    opts:["Voltage.","Current.","Power.","Frequency."], ans:0 },
-  { id:3, session:"2019", type:"mcq", q:"A network that does not have either voltage or current sources is called",
-    opts:["Active network.","Passive network.","Resistive network.","Dummy network."], ans:1 },
-  { id:4, session:"2019", type:"mcq", q:"Watt hour is the unit of",
-    opts:["Electric power.","Electric capacity.","Electric energy.","Electric charge."], ans:2 },
-  { id:5, session:"2019", type:"mcq", q:"The combined resistance of two equal resistors connected in parallel is equal to",
-    opts:["One half the resistance of one resistor.","Twice the resistance of one resistor.","Four times the resistance of one resistor.","One fourth the resistance of one resistor."], ans:0 },
-  { id:6, session:"2019", type:"mcq", q:"Thevenin's equivalent circuit consists of",
-    opts:["Series combination of R_Th, E_Th and R_L.","Series combination of R_Th and E_Th.","Parallel combination of R_Th and E_Th.","Parallel combination of R_Th, E_Th and R_L."], ans:1 },
-  { id:7, session:"2019", type:"mcq", q:"Superposition theorem can be applicable only to circuits having _______ elements.",
-    opts:["Non-linear","Passive","Resistive","Linear bilateral"], ans:3 },
-  { id:8, session:"2019", type:"mcq", q:"The Superposition theorem is essentially based on the concept of",
-    opts:["Duality.","Linearity.","Reciprocity.","Non-linearity."], ans:1 },
-  { id:9, session:"2019", type:"mcq", q:"The frequency of DC supply is _______.",
-    opts:["Zero.","16⅔ Hz.","50 Hz.","100 Hz."], ans:0 },
-  { id:10, session:"2019", type:"mcq", q:"Which of the following bulbs will have the least resistance?",
-    opts:["220V, 60W","220V, 100W","115V, 60W","115V, 100W"], ans:3 },
-  { id:11, session:"2019", type:"mcq", q:"The following components are all active components",
-    opts:["A resistor and an inductor.","A diode, a BJT and an FET.","A capacitor and an inductor.","An OpAmp, a BJT and thermionic triode."], ans:3 },
-  { id:12, session:"2019", type:"mcq", q:"The colour code of a resistor of nominal value 2.7 KΩ ± 10% is",
-    opts:["Red, Violet, Red and Silver.","Red, Violet, Yellow and Gold.","Red, Violet, Orange and Silver.","Red, Violet, Red and Gold."], ans:2 },
-  { id:13, session:"2019", type:"mcq", q:"The colour band sequence of a resistor is Grey, Blue, Gold, and Gold. The range in which its value must lie so as to satisfy the tolerance specified is between",
-    opts:["7.5 Ω and 8.5 Ω","3.12 KΩ and 5.22 KΩ","10.3 KΩ and 12.31 KΩ","8.17 Ω and 9.03 Ω"], ans:3 },
-  { id:14, session:"2019", type:"mcq", q:"When forward bias is applied to a junction diode, it",
-    opts:["Increases the potential barrier.","Decreases the potential barrier.","Reduces the majority-carrier current to zero.","Reduces the minority-carrier current to zero."], ans:1 },
-  { id:15, session:"2019", type:"mcq", q:"Which of the following components are all active components?",
-    opts:["A resistor and a capacitor.","A microphone, a LCD and a Thyratron.","An electric bulb, a transformer and a varactor diode.","An SCR, a vacuum diode and an LED."], ans:1 },
-  { id:16, session:"2019", type:"mcq", q:"If a change in base current does not change the collector current, the transistor amplifier is said to be",
-    opts:["Saturated.","Cut-off.","Critical.","Complemented."], ans:0 },
-  { id:17, session:"2019", type:"mcq", q:"The colour band sequence of a resistor is Yellow, Violet, Orange and Gold. The range in which its value must lie so as to satisfy the tolerance specified is between",
-    opts:["40 KΩ and 42.5 KΩ","44.65 Ω and 49.3 Ω","44.65 KΩ and 49.35 KΩ","43.25 KΩ and 45.22 KΩ"], ans:2 },
-  { id:18, session:"2019", type:"mcq", q:"Which of the following material has nearly zero temperature-coefficient of resistance?",
-    opts:["Carbon","Porcelain","Copper","Manganin"], ans:3 },
-  { id:19, session:"2019", type:"mcq", q:"A capacitor consists of two",
-    opts:["Insulators separated by a dielectric.","Conductors separated by an insulator.","Ceramic plates and one mica disc.","Silver-coated insulators."], ans:1 },
-  { id:20, session:"2019", type:"mcq", q:"The terminal point at which two or more branches of a circuit meet, or a point that is common to two circuits is called",
-    opts:["Loop","Junction","Node","All of the above."], ans:3 },
-  { id:21, session:"2019", type:"mcq", q:"On which law is the mesh analysis based?",
-    opts:["Nodal analysis","Kirchhoff's Voltage Law","Kirchhoff's Current Law","Thevenin's theorem"], ans:1 },
-  { id:22, session:"2019", type:"mcq", q:"Which theorem is useful when the amount of power, current or voltage drop in a particular component of a given circuit is desired?",
-    opts:["Superposition theorem","Reciprocity theorem","Millman's theorem","Thevenin's theorem"], ans:3 },
-  { id:23, session:"2019", type:"mcq", q:"Which theorem states that a linear two-terminal circuit can be replaced by an equivalent circuit consisting of a voltage source in series with a resistor?",
-    opts:["Norton's theorem","Thevenin's theorem","Reciprocity theorem","Maximum power transfer theorem."], ans:1 },
-  { id:24, session:"2019", type:"mcq", q:"Source transformation is the process of replacing a voltage source V_s in series with a resistor R by a current source in parallel with a resistor R, and vice versa.",
-    opts:["Input transformation","Equivalent circuit","Source transformation","Output transformation."], ans:2 },
-  { id:25, session:"2019", type:"mcq", q:"The decibel is a measure of",
-    opts:["Power","Voltage","Current","Power level."], ans:3 },
-  { id:26, session:"2019", type:"mcq", q:"A _______ is a device that can produce various patterns of voltage at a variety of frequencies and amplitudes.",
-    opts:["Function generator","Power supply unit","Signal generator","Multi-tester"], ans:0 },
-  { id:27, session:"2019", type:"mcq", q:"A _______ is a device that converts AC to DC, but the DC output is varying.",
-    opts:["Transformer","Rectifier","Regulator","CRO"], ans:1 },
-  { id:28, session:"2019", type:"mcq", q:"A _______ is a device that steps down high voltage AC mains to low voltage AC.",
-    opts:["Transformer","Rectifier","Regulator","CRO"], ans:0 },
-  { id:29, session:"2019", type:"mcq", q:"For what are the vertical and horizontal plates provided in a CRO?",
-    opts:["For synchronizing two types of deflections i.e. horizontal and vertical","For sweep time","For voltage regulation","To deflect the beam according to the input signal"], ans:3 },
-  { id:30, session:"2019", type:"mcq", q:"For what is a triggering circuit provided in a CRO?",
-    opts:["For synchronizing two types of deflection i.e. horizontal and vertical","For sweep time","For voltage regulation","To deflect the beam according to input signal"], ans:0 },
-  { id:31, session:"2019", type:"mcq", q:"When P-type semiconductor is connected to the positive terminal and N-type to the negative terminal of a voltage source, nearly zero resistance is offered to the flow of current. This is",
-    opts:["Forward biasing","Reverse biasing","Negative biasing","Positive biasing"], ans:0 },
-  { id:32, session:"2019", type:"mcq", q:"Which of the following is an application of a Zener diode?",
-    opts:["Voltage regulation","Meter protection","As a reference element","All of the above"], ans:3 },
-  { id:33, session:"2019", type:"mcq", q:"The voltage range availability of Zener diodes is",
-    opts:["0 to 24 V","2.4 V to 200 V","2 V to 100 V","0 to 200 V"], ans:1 },
-  { id:34, session:"2019", type:"mcq", q:"A multimeter (VOM) can be used for measuring",
-    opts:["DC quantities only","AC quantities only","Both DC as well as AC quantities","Power quantities only."], ans:2 },
-  { id:35, session:"2019", type:"mcq", q:"Zero adjust control is provided in an instrument for",
-    opts:["Correcting zero point","Changing the sensitivity","Tightening the moving component and casing","All of the above."], ans:0 },
-  { id:36, session:"2019", type:"mcq", q:"Transistor is a digital device that operates in",
-    opts:["Cut-off condition only","Saturation condition only","Both cut-off and saturation condition","Active region."], ans:2 },
-  { id:37, session:"2019", type:"mcq", q:"A binary number with four bits is called",
-    opts:["Byte","Nibble","Alpha","None of the above."], ans:1 },
-  { id:38, session:"2019", type:"mcq", q:"The largest number that can be represented by n bits is",
-    opts:["2ⁿ","2ⁿ − 1","2ⁿ + 1","2^(n−1)"], ans:1 },
-  { id:39, session:"2019", type:"mcq", q:"ICs cannot be used to fabricate",
-    opts:["Resistor","Capacitor","Varactor","Transformer."], ans:3 },
-  { id:40, session:"2019", type:"mcq", q:"The most important advantage of an IC is its",
-    opts:["Very low cost","Extremely high reliability","Extremely small size","Very small weight."], ans:1 },
-  { id:41, session:"2019", type:"mcq", q:"CRO experiment: The peak-to-peak vertical divisions occupied by the waveform were 4.6 and the VOLTS/DIV setting was 100 mV. Determine the peak-to-peak voltage.",
-    opts:["400 mV","460 mV","500 mV","520 mV"], ans:1 },
-  { id:42, session:"2019", type:"mcq", q:"CRO experiment: The horizontal divisions for two cycles occupied by the waveform were 8.8 and the TIME/DIV setting was 0.5 ms/DIV. Determine the frequency of the waveform.",
-    opts:["400 Hz","500 Hz","520 Hz","455 Hz"], ans:3 },
-  { id:43, session:"2019", type:"mcq", q:"The colour code of a resistor of nominal value 5 MΩ ± 20% is",
-    opts:["Violet, Orange, Red, Silver","Grey, Black, Green, None","Green, Black, Green, None","Green, Black, Yellow, None"], ans:2 },
-  { id:44, session:"2019", type:"mcq", q:"The transducer which converts sound to electrical energy is",
-    opts:["Loudspeaker","Earphone","Microphone","Piezo transducer."], ans:2 },
-  { id:45, session:"2019", type:"mcq", q:"One of the following transducers does NOT convert electrical energy to sound",
-    opts:["Loudspeaker","Buzzer","Microphone","Piezo transducer"], ans:2 },
-  { id:46, session:"2019", type:"mcq", q:"The device which is a very sensitive meter used to measure tiny currents, usually 1 mA or less is called",
-    opts:["Ohmmeter","Ammeter","Oscilloscope","Galvanometer"], ans:3 },
-  { id:47, session:"2019", type:"mcq", q:"An instrument used to display the shape of electrical signals and to measure voltage and time period is called",
-    opts:["Oscilloscope","Voltmeter","Galvanometer","Multi-meter"], ans:0 },
-  { id:48, session:"2019", type:"mcq", q:"The transducer which converts brightness (light) to resistance (an electrical property) is",
-    opts:["Thermistor","LDR","LED","Photodiode"], ans:1 },
-  { id:49, session:"2019", type:"mcq", q:"The component which only allows current to flow in one direction is",
-    opts:["LED","Diode","Zener diode","Photodiode"], ans:1 },
-  { id:50, session:"2019", type:"mcq", q:"Which gate has an output that can only be true when all its inputs are true?",
-    opts:["OR gate","NAND gate","AND gate","NOR Gate."], ans:2 },
-  { id:51, session:"2019", type:"mcq", q:"Why do we regulate voltage?",
-    opts:["To stabilize against thermal variation","To make constant the line voltage","To reduce changes in offset voltages","All of the above."], ans:3 },
+const QA = [
+  // ── SECTION A ─────────────────────────────────────
+  {
+    section: 'a',
+    q: 'Two key decisions that an entrepreneur usually takes.',
+    a: `<ul>
+      <li><strong>(i) What to produce (product/service decision):</strong> The entrepreneur decides what goods or services to offer based on market needs and available resources.</li>
+      <li><strong>(ii) How to produce (resource allocation decision):</strong> The entrepreneur decides how to combine labour, capital, and technology to produce the chosen product or service efficiently.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'The social perspective of an entrepreneur.',
+    a: `From a social perspective, an entrepreneur is viewed as a <strong>change agent</strong> — someone who identifies societal needs and creates enterprises that fulfil them. Entrepreneurs contribute to economic growth, create employment, introduce innovation, and improve the standard of living within their communities. Society benefits from the goods, services, and jobs entrepreneurs generate.`
+  },
+  {
+    section: 'a',
+    q: 'The psychological characteristics/school of an entrepreneur.',
+    a: `The psychological school focuses on the <strong>inner traits and motivations</strong> that drive entrepreneurs. Key characteristics include:
+    <ul>
+      <li><strong>Need for achievement</strong> – a strong desire to excel and accomplish goals</li>
+      <li><strong>Risk-taking propensity</strong> – willingness to take calculated risks</li>
+      <li><strong>Internal locus of control</strong> – belief that outcomes depend on personal actions</li>
+      <li><strong>Tolerance for ambiguity</strong> – comfort operating under uncertainty</li>
+      <li><strong>Innovation & creativity</strong> – ability to generate new ideas</li>
+      <li><strong>Persistence & determination</strong> – resilience when facing setbacks</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Two sources through which an entrepreneur\'s knowledge can develop.',
+    a: `<ul>
+      <li><strong>(i) Formal Education:</strong> Attending schools, universities, or entrepreneurship training programmes equips entrepreneurs with business knowledge, management skills, and theoretical frameworks.</li>
+      <li><strong>(ii) Experience (Practical Learning):</strong> Working in a business, observing successful entrepreneurs, or running one's own enterprise provides hands-on, real-world knowledge that complements formal education.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Risks create… (complete the statement).',
+    a: `<strong>Risks create opportunities.</strong> Every risk an entrepreneur takes opens the possibility of reward, profit, and innovation. Entrepreneurs who successfully navigate risks gain competitive advantage, market share, and business growth. Risk also creates the incentive for vigilance, planning, and the development of contingency strategies.`
+  },
+  {
+    section: 'a',
+    q: 'Three economic incentives for the entrepreneur.',
+    a: `<ul>
+      <li><strong>(i) Profit:</strong> The financial reward for bearing risk and organising production — the primary economic incentive.</li>
+      <li><strong>(ii) Independence:</strong> The freedom to be one's own boss, make decisions, and control one's economic destiny.</li>
+      <li><strong>(iii) Wealth Creation:</strong> The opportunity to accumulate assets and build long-term financial security through a successful enterprise.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Two issues involved in developing a business plan.',
+    a: `<ul>
+      <li><strong>(i) Market Analysis:</strong> Understanding the target market, customer needs, competition, and demand — a critical component of any viable business plan.</li>
+      <li><strong>(ii) Financial Planning:</strong> Estimating start-up costs, revenue projections, cash flow, and funding requirements to ensure the business is economically feasible.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'A market analysis is often conducted in order to…',
+    a: `A market analysis is conducted in order to:
+    <ul>
+      <li><strong>(i) Understand customer needs and market demand</strong> – identify who the potential customers are, what they want, and how much they are willing to pay.</li>
+      <li><strong>(ii) Assess the competition</strong> – evaluate competitors' strengths and weaknesses to find a competitive advantage and position the business effectively in the market.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Three parts of a business model.',
+    a: `<ul>
+      <li><strong>(i) Value Proposition:</strong> What product or service the business offers and why customers should choose it over alternatives.</li>
+      <li><strong>(ii) Revenue Model:</strong> How the business generates income — through sales, subscriptions, licensing, advertising, etc.</li>
+      <li><strong>(iii) Key Resources & Activities:</strong> The critical assets (human, physical, financial, intellectual) and activities required to deliver the value proposition and sustain the business.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Three issues included in the needs of an individual.',
+    a: `<ul>
+      <li><strong>(i) The need for achievement:</strong> The desire to accomplish goals, meet standards of excellence, and succeed.</li>
+      <li><strong>(ii) The need for recognition:</strong> The desire to be acknowledged, respected, and appreciated by others for one's efforts and accomplishments.</li>
+      <li><strong>(iii) The need for change:</strong> The desire to improve one's situation, seek new opportunities, and avoid stagnation — a key motivator for entrepreneurial action.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Two questions an entrepreneur should ask a potential customer.',
+    a: `<ul>
+      <li><strong>(i) "What problem are you trying to solve?" / "What do you need?"</strong> — to understand the customer's pain point and whether the entrepreneur's product or service can meet that need.</li>
+      <li><strong>(ii) "How much are you willing to pay for a solution?"</strong> — to gauge price sensitivity and determine whether the business is economically viable for that customer segment.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Two questions an entrepreneur should ask his suppliers.',
+    a: `<ul>
+      <li><strong>(i) "What are your minimum order quantities and delivery timelines?"</strong> — to plan production schedules and inventory management effectively.</li>
+      <li><strong>(ii) "What are your payment terms and pricing structure?"</strong> — to manage cash flow and assess whether the supplier's costs allow for a profitable operation.</li>
+    </ul>`
+  },
+  {
+    section: 'a',
+    q: 'Financial literacy is…',
+    a: `<strong>Financial literacy</strong> is the ability to understand and effectively use financial skills, including personal financial management, budgeting, investing, and financial planning. It involves knowing how money works — how it is earned, managed, invested, and donated to others — enabling individuals and entrepreneurs to make informed and effective financial decisions.`
+  },
+  {
+    section: 'a',
+    q: 'Process mapping in financial literacy refers to…',
+    a: `<strong>Process mapping in financial literacy</strong> refers to the visual representation or documentation of financial processes and workflows within a business or personal financial plan. It involves identifying and mapping out each step of a financial activity — such as budgeting, invoicing, payroll, or expense tracking — to understand the flow of money, identify inefficiencies, and improve financial management.`
+  },
+  {
+    section: 'a',
+    q: 'Technology integration in financial literacy refers to…',
+    a: `<strong>Technology integration in financial literacy</strong> refers to the use of digital tools, software, and platforms to improve financial knowledge, management, and decision-making. It includes the use of mobile banking apps, accounting software (e.g. QuickBooks), budgeting apps, online payment systems, and financial planning platforms that make it easier for entrepreneurs and individuals to track, manage, and understand their finances in real time.`
+  },
 
-  // ── 2020/2021 SESSION ──────────────────────────────────────────────
-  // Section A — Short answer
-  { id:52, session:"2020", type:"short", q:"What three methods are used for finding resistance?",
-    answer:"The three main methods are: (1) Ohm's Law method — measure voltage and current then use R = V/I; (2) Wheatstone Bridge method — a null-balance circuit for precise measurement; (3) Ammeter-Voltmeter method — direct measurement using both instruments." },
-  { id:53, session:"2020", type:"short", q:"Capacitor stores which type of energy?",
-    answer:"A capacitor stores electrical potential energy (electrostatic energy) in the electric field between its plates." },
-  { id:54, session:"2020", type:"short", q:"Inductor stores which type of energy?",
-    answer:"An inductor stores energy in the form of magnetic energy (in its magnetic field), given by E = ½LI²." },
-  { id:55, session:"2020", type:"short", q:"Solid state electronics arises from the unique properties of what?",
-    answer:"Solid state electronics arises from the unique properties of semiconductors (primarily silicon and germanium), whose electrical conductivity lies between that of conductors and insulators." },
-  { id:56, session:"2020", type:"short", q:"When p-type semiconductor is connected to the negative terminal of the battery and n-type material is connected to the positive terminal, the diode is called what?",
-    answer:"This configuration is called reverse bias. In reverse bias, the depletion layer widens and very little current (only minority carrier leakage current) flows." },
-  { id:57, session:"2020", type:"short", q:"A process in which two or more metal items are joined together by melting and flowing a filler is called what?",
-    answer:"This process is called soldering (specifically, the description fits soft soldering or brazing depending on the filler metal temperature). In electronics, it is most commonly referred to as soldering." },
-  { id:58, session:"2020", type:"short", q:"A network containing generators or energy sources along with other elements is known as what?",
-    answer:"A network containing energy sources (voltage or current generators) is known as an Active network." },
-  { id:59, session:"2020", type:"short", q:"A terminal of any branch of a network, or a terminal common to two or more branches, is known as a what?",
-    answer:"Such a terminal is known as a Node. A node is a junction point in a circuit where two or more circuit elements meet." },
-  { id:60, session:"2020", type:"short", q:"What are great for connecting components together to test a circuit without the need for soldering?",
-    answer:"Breadboards (also called solderless breadboards or protoboards) are ideal for this purpose — they allow components to be inserted and removed easily without soldering." },
-  { id:61, session:"2020", type:"short", q:"On which law is the mesh analysis based?",
-    answer:"Mesh analysis is based on Kirchhoff's Voltage Law (KVL), which states that the algebraic sum of all voltages around any closed loop in a circuit is zero." },
-
-  // Section B — Symbol identification (describe what to sketch)
-  { id:62, session:"2020", type:"short", q:"It is a complement of AND gate. The output is low only when both the inputs are high, otherwise it is high. [Sketch the electrical circuit symbol]",
-    answer:"This describes a NAND gate. Symbol: Draw an AND gate shape (D-shape body with flat left side) with a small bubble (circle) at the output terminal. Inputs on the left, output on the right with the inversion bubble." },
-  { id:63, session:"2020", type:"short", q:"This gate implements negation of EXOR logic. The output is high only if the two inputs are identical. [Sketch the electrical circuit symbol]",
-    answer:"This describes an XNOR gate (Exclusive NOR). Symbol: Draw an EXOR gate shape (curved body with an extra arc on the input side) with a small inversion bubble at the output." },
-  { id:64, session:"2020", type:"short", q:"It is used to measure voltage with respect to time for signals. [Sketch the electrical circuit symbol]",
-    answer:"This describes an Oscilloscope (CRO). Symbol: Draw a rectangle representing the CRO casing, with a display screen depicted inside. Show probe inputs at the front." },
-  { id:65, session:"2020", type:"short", q:"This is also an audio device. Converts the electrical signal to sound signal in an amplified version. [Sketch the electrical circuit symbol]",
-    answer:"This describes a Loudspeaker/Speaker. Symbol: A triangle pointing right with a trapezoid shape attached to its right side representing the cone. The electrical terminals are on the left." },
-  { id:66, session:"2020", type:"short", q:"A transducer which converts brightness (light) to resistance (an electrical property). They are also called photo resistors. [Sketch the electrical circuit symbol]",
-    answer:"This describes an LDR (Light Dependent Resistor / Photoresistor). Symbol: Draw the standard resistor symbol (rectangle or zigzag) with two inward-pointing arrows above it representing incident light." },
-  { id:67, session:"2020", type:"short", q:"These capacitors are used to control the capacitance by using a screwdriver or similar tools. It is designed to be set when the circuit is made and then left without further adjustment. [Sketch the electrical circuit symbol]",
-    answer:"This describes a Trimmer / Preset Capacitor (variable capacitor). Symbol: Draw the standard capacitor symbol (two parallel lines) with an arrow through it indicating variability, or a curved arrow indicating adjustment." },
-  { id:68, session:"2020", type:"short", q:"A 2-way changeover switch that directs the flow of current to one of two routes according to its position. Some have a central OFF position (ON-OFF-ON). [Sketch the electrical circuit symbol]",
-    answer:"This describes a SPDT (Single Pole Double Throw) switch. Symbol: Draw a single pole with two output terminals and a movable arm that can connect to either terminal." },
-  { id:69, session:"2020", type:"short", q:"In complex circuit diagrams, some wires may not connect with others. In this case, bridging is commonly utilized. [Sketch the electrical circuit symbol]",
-    answer:"This describes a wire bridge / non-connecting crossover. Symbol: Two lines crossing each other with a small semi-circular arc (bridge) on one line showing they do NOT connect at the crossing point." },
-
-  // Section C — MCQ 2020/2021
-  { id:70, session:"2020", type:"mcq", q:"A network that does not have either voltage or current sources is called",
-    opts:["Active network","Passive network","Resistive network","Dummy network."], ans:1 },
-  { id:71, session:"2020", type:"mcq", q:"Watt hour is the unit of",
-    opts:["Electric power","Electric capacity","Electric energy","Electric charge."], ans:2 },
-  { id:72, session:"2020", type:"mcq", q:"The forward voltage at which the barrier is removed and current through the junction starts increasing rapidly is called",
-    opts:["Knee voltage","Breakdown voltage","Reverse voltage","DC Voltage"], ans:0 },
-  { id:73, session:"2020", type:"mcq", q:"Breakdown voltage is defined as the voltage at which the barrier is removed and inverse current through the junction starts increasing rapidly and can damage the diode.",
-    opts:["Knee voltage","AC voltage","Reverse voltage","DC Voltage"], ans:2 },
-  { id:74, session:"2020", type:"mcq", q:"Solid-state devices are also called",
-    opts:["Active devices","Passive devices","Semiconductors","Conductors"], ans:2 },
-  { id:75, session:"2020", type:"mcq", q:"In reverse bias, we may assume that the diode current is _______ (if it is not a Zener diode)",
-    opts:["Zero","Unity","0.7","0.3"], ans:0 },
-  { id:76, session:"2020", type:"mcq", q:"What is the current in Fig. 1.1 (5V source, 2KΩ resistor), if the diode is a silicon type?",
-    opts:["4.5 mA","2.15 mA","0 mA","−2.5 mA"], ans:1 },
-  { id:77, session:"2020", type:"mcq", q:"What is the current in Fig. 1.2 (12V source, 3KΩ resistor), if the diode is a silicon type?",
-    opts:["5 mA","4 mA","0 mA","−3 mA"], ans:1 },
-  { id:78, session:"2020", type:"mcq", q:"In Fig. 1.3 (12V source, R1=2KΩ, R2=4KΩ with a diode), what will be the current in R2 if we change the source voltage from 12V to 5V?",
-    opts:["The current will stay the same as before.","The current will be lower than before.","The current will be higher than before.","The current will be zero."], ans:1 },
-  { id:79, session:"2020", type:"mcq", q:"What is the voltage on R2 in Fig. 1.4 (12V source, R1=2KΩ, R2=4KΩ, silicon diode)?",
-    opts:["12V","0.7V","4V","8V"], ans:3 },
-  { id:80, session:"2020", type:"mcq", q:"The device which is a sensitive meter used to measure tiny current, usually 1 mA or less is called",
-    opts:["Ohmmeter","Loudspeaker","Microphone","Galvanometer"], ans:3 },
-  { id:81, session:"2020", type:"mcq", q:"The decibel is a measure of",
-    opts:["Power","Voltage","Current","Power level"], ans:3 },
-  { id:82, session:"2020", type:"mcq", q:"The colour band sequence of a resistor is Grey, Blue, Red and Silver. The range in which its value must lie so as to satisfy the tolerance specified is between",
-    opts:["7.74 KΩ and 9.46 Ω","7.8 KΩ and 9.5 KΩ","8.7 KΩ and 9.5 KΩ","9.5 Ω and 7.7 Ω"], ans:1 },
-  { id:83, session:"2020", type:"mcq", q:"The colour code of a resistor of nominal value 2.7 KΩ ± 0.25% is",
-    opts:["Red, Violet, Orange and Silver","Red, Violet, Orange and Green","Red, Violet, Orange and Blue","Red, Violet, Orange and Red"], ans:2 },
-  { id:84, session:"2020", type:"mcq", q:"The colour code of a resistor of nominal value 920 Ω ± 0.1% is",
-    opts:["White, Red, Brown and Gold","White, Red, Red and Violet","White, Red, Brown and Violet","White, Red, Brown and Gray"], ans:3 },
-  { id:85, session:"2020", type:"mcq", q:"The colour band sequence of a resistor is Orange, Green, Brown and Red. The range in which its value must lie so as to satisfy the tolerance specified is between",
-    opts:["348.25 Ω and 351.75 Ω","343 Ω and 357 Ω","332.5 Ω and 367.5 Ω","315 Ω and 385 Ω"], ans:1 },
-  { id:86, session:"2020", type:"mcq", q:"A _______ is a device that can produce various patterns of voltage at a variety of frequencies and amplitudes.",
-    opts:["Function generator","Power supply unit","Multi-tester","Signal generator"], ans:0 },
-  { id:87, session:"2020", type:"mcq", q:"An instrument used to display the shape of electrical signals and to measure their voltage and time period is called",
-    opts:["Function generator","Signal generator","Piezo transducer","Oscilloscope"], ans:3 },
-  { id:88, session:"2020", type:"mcq", q:"Zero adjust control is provided in an instrument for",
-    opts:["Standard error analysis","Correcting zero point","Changing the sensitivity","All of the above"], ans:1 },
-  { id:89, session:"2020", type:"mcq", q:"To check an ordinary silicon forward conduction mode of diode using a digital multimeter, the display should show a voltage between _______ to confirm the diode is healthy.",
-    opts:["0.5V to 0.7V","0.6V to 0.8V","0.6V to 0.7V","0.5V to 0.8V"], ans:0 },
-  { id:90, session:"2020", type:"mcq", q:"Part number of a logic gate IC SN74LS08J — which of the following describes its characteristics?",
-    opts:["The prefix: the manufacturer's code","Core part number: determines technology (TTL or CMOS), device series and function","The trailing suffix letter(s): code used by manufacturers to designate the package (DIP)","All of the above"], ans:3 },
-  { id:91, session:"2020", type:"mcq", q:"Where are logic gates used?",
-    opts:["Flip-Flops","Registers","Counters / sequential logic circuits","Both A, B, and C"], ans:3 },
+  // ── SECTION B ─────────────────────────────────────
+  {
+    section: 'b',
+    q: 'What is the aperture mechanism in a camera\'s functionality?',
+    a: `The <strong>aperture</strong> is the opening in the camera lens through which light passes to reach the sensor (or film). It works like the pupil of an eye — it can open wider or close narrower to control the amount of light entering.
+    <ul>
+      <li>A <strong>wider aperture</strong> (small f-number, e.g. f/1.8) lets in more light and creates a <em>shallow depth of field</em> (blurry background).</li>
+      <li>A <strong>narrower aperture</strong> (large f-number, e.g. f/16) lets in less light and keeps more of the scene in focus.</li>
+    </ul>
+    Aperture is one of the three pillars of the <em>exposure triangle</em> — alongside shutter speed and ISO.`
+  },
+  {
+    section: 'b',
+    q: 'List three fundamental principles of photography.',
+    a: `<ul>
+      <li><strong>(i) Aperture:</strong> Controls how wide the lens opens — affecting both light intake and depth of field.</li>
+      <li><strong>(ii) Shutter Speed:</strong> Controls how long the sensor is exposed to light — affecting brightness and motion blur.</li>
+      <li><strong>(iii) ISO:</strong> Controls the sensor's sensitivity to light — affecting brightness and image grain/noise.</li>
+    </ul>
+    These three elements form the <strong>Exposure Triangle</strong>, and balancing them correctly produces a well-exposed image.`
+  },
+  {
+    section: 'b',
+    q: 'What could be removed through cropping or camera position that can improve the photo?',
+    a: `Through <strong>cropping</strong> or adjusting <strong>camera position</strong>, a photographer can remove:
+    <ul>
+      <li><strong>Distracting background elements</strong> – objects, people, or clutter that draw the viewer's eye away from the main subject.</li>
+      <li><strong>Unwanted space</strong> – excessive empty areas that weaken the composition.</li>
+      <li><strong>Mergers</strong> – accidental overlap between the subject and background objects (e.g. a tree appearing to grow from someone's head).</li>
+    </ul>
+    The goal is to simplify the frame and focus attention on the intended subject.`
+  },
+  {
+    section: 'b',
+    q: 'What is the term for a collective focus on photography and videography?',
+    a: `The term is <strong>"Visual Media"</strong> or more specifically <strong>"Content Photography and Videography."</strong> When both disciplines are considered together, they fall under the broader umbrella of <strong>visual storytelling</strong> or <strong>visual content creation</strong> — using images and moving pictures to communicate, document, or create art.`
+  },
+  {
+    section: 'b',
+    q: 'Describe the process of starting a Camera.',
+    a: `<ul>
+      <li><strong>Step 1 – Power ON:</strong> Locate and press the <em>ON/OFF button</em> (usually on the top or back of the camera).</li>
+      <li><strong>Step 2 – Insert/Check Memory Card & Battery:</strong> Ensure the battery is charged and a memory card is inserted.</li>
+      <li><strong>Step 3 – Set Mode:</strong> Choose a shooting mode (Auto, Manual, Aperture Priority, etc.) using the mode dial.</li>
+      <li><strong>Step 4 – Adjust Settings:</strong> Set ISO, aperture, and shutter speed as needed for your environment.</li>
+      <li><strong>Step 5 – Focus:</strong> Half-press the shutter button to allow the camera to auto-focus on the subject.</li>
+      <li><strong>Step 6 – Shoot / Record:</strong> Fully press the shutter button to capture a photo, or press the record button to start video.</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'How can we optimize our equipment and techniques for shooting in various environments?',
+    a: `<ul>
+      <li><strong>Low Light (Indoor/Night):</strong> Increase ISO, use a wider aperture (lower f-number), slow the shutter speed, and use a speedlight or external flash (e.g. Ad 200, V1 speedlight).</li>
+      <li><strong>Bright Outdoor Light:</strong> Use a lower ISO (100–200), faster shutter speed, and narrower aperture to avoid overexposure. A UV filter or ND filter helps.</li>
+      <li><strong>Fast-Moving Subjects:</strong> Use a fast shutter speed (1/500s or higher) to freeze motion.</li>
+      <li><strong>Landscapes:</strong> Use a narrow aperture (f/8–f/16) for deep depth of field, a tripod for stability, and shoot during golden hour.</li>
+      <li><strong>Lens choice:</strong> Wide-angle for environments/landscapes; telephoto for distant subjects; prime lens for portraits with beautiful bokeh.</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'What is the necessity of possessing many lenses?',
+    a: `Different lenses serve different creative and technical purposes:
+    <ul>
+      <li><strong>Prime Lens</strong> – fixed focal length; sharper images and wider apertures (great for portraits and low light).</li>
+      <li><strong>Zoom Lens</strong> – versatile; covers multiple focal lengths in one lens (wide, normal, telephoto).</li>
+      <li><strong>Wide-Angle Lens</strong> – captures broad scenes (ideal for landscapes and architecture).</li>
+      <li><strong>Macro Lens</strong> – extreme close-up photography of small subjects.</li>
+      <li><strong>Telephoto Lens</strong> – reaches distant subjects (great for sports, wildlife, events).</li>
+    </ul>
+    No single lens covers every situation perfectly, so a collection of lenses gives a photographer creative flexibility across all environments and subjects.`
+  },
+  {
+    section: 'b',
+    q: 'What constitutes a wide angle lens?',
+    a: `A <strong>wide-angle lens</strong> is defined by its short focal length (typically <strong>35mm or below</strong>), which produces a <em>wide field of view</em>. Common wide-angle focal lengths include <strong>14mm, 16mm, 24mm, and 35mm</strong>.
+    <br><br>
+    Wide-angle lenses are ideal for:
+    <ul>
+      <li>Landscape and scenic photography</li>
+      <li>Architecture and interior shots where space is limited</li>
+      <li>Group photos and environmental portraits</li>
+    </ul>
+    They allow more of the scene to be captured within the frame, but can also introduce distortion near the edges.`
+  },
+  {
+    section: 'b',
+    q: 'Definition of a prime lens. What constitutes photography?',
+    a: `<strong>Prime Lens:</strong> A prime lens is a camera lens with a <em>fixed focal length</em> — it cannot zoom in or out. To adjust framing, the photographer must physically move closer or further from the subject ("zoom with your feet"). Prime lenses are known for their sharpness, wide maximum apertures, and low-light performance.<br><br>
+    <strong>What constitutes photography?</strong> Photography is constituted by:
+    <ul>
+      <li>A <strong>camera</strong> (the tool)</li>
+      <li><strong>Light</strong> (the essential ingredient)</li>
+      <li>A <strong>subject</strong> (what is being captured)</li>
+      <li><strong>Composition</strong> (how elements are arranged in the frame)</li>
+      <li><strong>Exposure settings</strong> – Aperture, Shutter Speed, and ISO</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'What distinguishes a digital camera from an analog camera?',
+    a: `<ul>
+      <li><strong>Digital Camera:</strong> Captures images on an <em>electronic image sensor</em> (CCD or CMOS). Images are stored as digital files on a memory card. Can be previewed instantly on an LCD screen. Easy to edit, share, and reproduce. Examples: DSLR, Mirrorless, 360 cameras.</li>
+      <li><strong>Analog (Film) Camera:</strong> Captures images on a <em>light-sensitive film roll</em>. Images require chemical development before viewing. No instant preview. Each shot uses film, which has a limited number of exposures. The key distinguishing feature is <strong>interchangeable lenses</strong> and the use of film vs digital sensors.</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'What is it called when the light entering the camera is excessive or insufficient?',
+    a: `<ul>
+      <li><strong>Excessive light (too much light):</strong> The image is <strong>Overexposed</strong> — it appears too bright, washed out, with lost detail in the highlights.</li>
+      <li><strong>Insufficient light (too little light):</strong> The image is <strong>Underexposed</strong> — it appears too dark, with details and colours less visible or lost in shadows.</li>
+    </ul>
+    Both conditions are corrected by adjusting the <em>exposure triangle</em>: aperture, shutter speed, and ISO.`
+  },
+  {
+    section: 'b',
+    q: 'What is referred to as noise in photography?',
+    a: `<strong>Noise</strong> in photography refers to the <em>grainy, speckled texture</em> that appears in a photograph, degrading image quality. It is the photographic equivalent of static in audio.
+    <br><br>
+    Noise is caused by:
+    <ul>
+      <li>Using a <strong>high ISO setting</strong> (e.g. ISO 1600 or above)</li>
+      <li>Shooting in <strong>low light conditions</strong></li>
+      <li>Using a camera with a <strong>small sensor</strong></li>
+    </ul>
+    To minimize noise: use a <strong>lower ISO</strong>, ensure adequate lighting, and use a high-quality camera with a large sensor.`
+  },
+  {
+    section: 'b',
+    q: 'In videography, what are the camera movements?',
+    a: `<ul>
+      <li><strong>Pan Right / Pan Left:</strong> Moving the camera horizontally to the right or left (the camera stays in place; only rotates on its axis).</li>
+      <li><strong>Tilt Up / Tilt Down:</strong> Moving the camera vertically upward or downward on its axis.</li>
+      <li><strong>Zoom In / Zoom Out:</strong> Using the lens to magnify or reduce the subject within the frame — the camera does not physically move.</li>
+      <li><strong>Track In / Track Out:</strong> Physically moving the camera toward or away from the subject along a track, dolly, or body mount — creating a more immersive motion than a zoom.</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'Enumerate and describe the camera buttons/features.',
+    a: `<ul>
+      <li><strong>Shutter Button:</strong> The primary button that opens/closes the shutter to capture a photo. Half-press to focus, full press to shoot.</li>
+      <li><strong>Aperture Button:</strong> Marked with a partial shutter symbol — used to manually set the aperture (lens opening).</li>
+      <li><strong>Exposure Compensation Button (+ / -):</strong> Used to manually brighten or darken the image from the camera's automatic setting.</li>
+      <li><strong>ISO Button:</strong> Adjusts the sensor's sensitivity to light.</li>
+      <li><strong>Self-timer Button:</strong> Marked with a stopwatch icon — delays the shot by a set number of seconds.</li>
+      <li><strong>Playback Button:</strong> Marked with a ▶ icon — allows review of captured photos or videos.</li>
+      <li><strong>Delete Button:</strong> Marked with a trash icon — removes one or multiple stored images.</li>
+      <li><strong>Menu Button:</strong> Accesses camera settings, modes, and configurations.</li>
+      <li><strong>Lens Release Button:</strong> Allows removal and replacement of the camera lens.</li>
+      <li><strong>Record Button:</strong> Initiates video recording.</li>
+    </ul>`
+  },
+  {
+    section: 'b',
+    q: 'What is the full meaning of SLR?',
+    a: `<strong>SLR</strong> stands for <strong>Single-Lens Reflex.</strong>
+    <br><br>
+    An SLR camera uses a <em>mirror-and-prism system</em> so that the photographer sees through the same lens that captures the image. When the shutter button is pressed, the mirror flips up, allowing light to hit the film or sensor. The digital version of the SLR is the <strong>DSLR (Digital Single-Lens Reflex)</strong>.`
+  }
 ];
 
-// ── Render ──────────────────────────────────────────────────────────
-let activeFilter = "all";
+// ── Render ─────────────────────────────────────────────────────
+const container = document.getElementById('qa-container');
+const noResults  = document.getElementById('no-results');
+const searchInput = document.getElementById('search');
+const resultCount = document.getElementById('result-count');
+let activeFilter = 'all';
 
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 function highlight(text, term) {
-  if (!term) return escHtml(text);
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return escHtml(text).replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+  if (!term) return text;
+  return text.replace(new RegExp(`(${escapeRegExp(term)})`, 'gi'), '<mark>$1</mark>');
 }
 
-function escHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
+function renderAll(query = '', filter = 'all') {
+  container.innerHTML = '';
+  const q = query.trim().toLowerCase();
+  let lastSection = '';
+  let visibleCount = 0;
 
-function letterLabel(i) { return String.fromCharCode(65+i); }
+  QA.forEach((item, i) => {
+    if (filter !== 'all' && item.section !== filter) return;
+    const matchQ = item.q.toLowerCase().includes(q);
+    const matchA = item.a.toLowerCase().includes(q);
+    if (q && !matchQ && !matchA) return;
 
-function renderCard(q, term) {
-  const hl = (t) => highlight(t, term);
-  if (q.type === "mcq") {
-    const optHtml = q.opts.map((o, i) => `
-      <div class="option ${i === q.ans ? 'correct' : 'wrong'}" data-letter="${letterLabel(i)}">
-        <span class="opt-letter">${letterLabel(i)}</span>
-        <span>${hl(o)}</span>
-      </div>`).join('');
-    return `
-    <div class="q-card" id="qc-${q.id}">
-      <div class="q-header" onclick="toggleCard(${q.id})">
-        <span class="q-num">Q${q.id}</span>
-        <span class="q-text">${hl(q.q)}</span>
-        <span class="q-toggle">+</span>
-      </div>
-      <div class="q-options">
-        <div class="options-grid">${optHtml}</div>
-        <div class="answer-line">✓ Correct answer: ${letterLabel(q.ans)}. ${escHtml(q.opts[q.ans])}</div>
-      </div>
-    </div>`;
-  } else {
-    return `
-    <div class="q-card" id="qc-${q.id}">
-      <div class="q-header" onclick="toggleCard(${q.id})">
-        <span class="q-num">Q${q.id}</span>
-        <span class="q-text">${hl(q.q)}</span>
-        <span class="q-toggle">+</span>
-      </div>
-      <div class="q-options">
-        <div class="short-answer"><strong>Answer:</strong><br>${escHtml(q.answer)}</div>
-      </div>
-    </div>`;
-  }
-}
+    visibleCount++;
 
-function render() {
-  const term = document.getElementById('searchInput').value.trim().toLowerCase();
-  const list = document.getElementById('questionList');
-  const empty = document.getElementById('emptyState');
-  const count = document.getElementById('resultCount');
+    // Section header
+    if (item.section !== lastSection) {
+      lastSection = item.section;
+      const label = document.createElement('div');
+      label.className = 'section-label';
+      label.dataset.group = item.section;
+      if (filter === 'all') {
+        label.innerHTML = item.section === 'a'
+          ? `<span class="pill pill-a">Section A</span><h2>Entrepreneurship Studies</h2><hr>`
+          : `<span class="pill pill-b">Section B</span><h2>Photography &amp; Videography</h2><hr>`;
+        container.appendChild(label);
+      }
+    }
 
-  const filtered = QUESTIONS.filter(q => {
-    const matchFilter =
-      activeFilter === "all" ||
-      (activeFilter === "2019" && q.session === "2019") ||
-      (activeFilter === "2020" && q.session === "2020") ||
-      (activeFilter === "mcq" && q.type === "mcq") ||
-      (activeFilter === "short" && q.type === "short");
-    if (!matchFilter) return false;
-    if (!term) return true;
-    const searchable = [q.q, ...(q.opts||[]), q.answer||''].join(' ').toLowerCase();
-    return searchable.includes(term);
+    const card = document.createElement('div');
+    card.className = `qa-card section-${item.section}`;
+
+    const qDisplay = q ? highlight(item.q, query.trim()) : item.q;
+    const aDisplay = q ? highlight(item.a, query.trim()) : item.a;
+
+    card.innerHTML = `
+      <div class="qa-question">
+        <div class="q-num">${i + 1}</div>
+        <div class="q-text">${qDisplay}</div>
+        <div class="q-toggle">+</div>
+      </div>
+      <div class="qa-answer">${aDisplay}</div>`;
+
+    card.querySelector('.qa-question').addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+
+    container.appendChild(card);
   });
 
-  // Clear cards (keep emptyState)
-  Array.from(list.querySelectorAll('.q-card, .section-divider')).forEach(e => e.remove());
-
-  if (filtered.length === 0) {
-    empty.style.display = 'block';
-    count.textContent = '0';
-    return;
-  }
-  empty.style.display = 'none';
-  count.textContent = filtered.length;
-
-  // Group by session
-  const sess19 = filtered.filter(q => q.session === "2019");
-  const sess20 = filtered.filter(q => q.session === "2020");
-
-  let html = '';
-  if (sess19.length) {
-    html += `<div class="section-divider"><h2>Session</h2><div class="divider-line"></div><span class="session-badge">2019/2020</span></div>`;
-    html += sess19.map(q => renderCard(q, term)).join('');
-  }
-  if (sess20.length) {
-    html += `<div class="section-divider"><h2>Session</h2><div class="divider-line"></div><span class="session-badge">2020/2021</span></div>`;
-    html += sess20.map(q => renderCard(q, term)).join('');
-  }
-  list.insertAdjacentHTML('beforeend', html);
+  noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  resultCount.textContent = q
+    ? `${visibleCount} result${visibleCount !== 1 ? 's' : ''}`
+    : `${visibleCount} question${visibleCount !== 1 ? 's' : ''}`;
 }
 
-function toggleCard(id) {
-  const card = document.getElementById(`qc-${id}`);
-  card.classList.toggle('open');
-}
-
-// Search
-const input = document.getElementById('searchInput');
-const clearBtn = document.getElementById('clearBtn');
-input.addEventListener('input', () => {
-  clearBtn.style.display = input.value ? 'flex' : 'none';
-  render();
-});
-clearBtn.addEventListener('click', () => {
-  input.value = '';
-  clearBtn.style.display = 'none';
-  render();
-  input.focus();
+// ── Search ──────────────────────────────────────────────────────
+searchInput.addEventListener('input', e => {
+  renderAll(e.target.value, activeFilter);
 });
 
-// Filters
+// ── Filters ─────────────────────────────────────────────────────
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilter = btn.dataset.filter;
-    render();
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.className = 'filter-btn';
+    });
+    const f = btn.dataset.filter;
+    activeFilter = f;
+    if (f === 'all')  btn.classList.add('active-all');
+    if (f === 'a')    btn.classList.add('active-a');
+    if (f === 'b')    btn.classList.add('active-b');
+    renderAll(searchInput.value, f);
   });
 });
 
-// Scroll top
-const scrollBtn = document.getElementById('scrollTop');
-window.addEventListener('scroll', () => {
-  scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-});
-scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-// Init
-render();
+renderAll();
 </script>
 </body>
 </html>
