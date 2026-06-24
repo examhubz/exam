@@ -35,7 +35,7 @@
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
@@ -341,7 +341,7 @@
             const [expiryYear, setExpiryYear] = useState('2026');
 
             useEffect(() => {
-                lucide.createIcons();
+                if(typeof lucide !== "undefined") lucide.createIcons();
             }, [step]);
 
             const handleCardInput = (e) => {
@@ -753,7 +753,7 @@
             }, [selectedTicket, selectedMatch, isCartOpen]);
 
             useEffect(() => {
-                lucide.createIcons();
+                if(typeof lucide !== "undefined") lucide.createIcons();
             }, [activePage, isMenuOpen, selectedTicket, selectedMatch, cart, isCartOpen, showNotification]);
 
             const navigate = (page) => {
@@ -946,7 +946,7 @@
                                 ].map((item, i) => (
                                     <div key={i} className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-2xl hover:shadow-blue-600/5 transition-all group">
                                         <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                                            <span ref={el => { if(el){ el.innerHTML=`<i data-lucide="${item.icon}" class="${item.color} w-8 h-8"></i>`; lucide.createIcons(); } }}></span>
+                                            <span ref={el => { if(el){ el.innerHTML=`<i data-lucide="${item.icon}" class="${item.color} w-8 h-8"></i>`; if(typeof lucide !== "undefined") lucide.createIcons(); } }}></span>
                                         </div>
                                         <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                                         <p className="text-slate-600 leading-relaxed">{item.desc}</p>
@@ -1265,7 +1265,7 @@
                     return { ...t, price: Math.round(t.basePrice * multiplier), stock, stockInfo };
                 });
 
-                useEffect(() => { lucide.createIcons(); });
+                useEffect(() => { if(typeof lucide !== "undefined") lucide.createIcons(); });
 
                 return (
                     <div className="fixed inset-0 z-[190] bg-slate-900/80 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
@@ -1359,7 +1359,7 @@
                 const [matchQtys, setMatchQtys] = useState({});
 
                 useEffect(() => {
-                    lucide.createIcons();
+                    if(typeof lucide !== "undefined") lucide.createIcons();
                 }, [wcSubPage, matchQtys]);
 
                 // Determine which matches to show based on HOWMANYMATCHES
@@ -1928,7 +1928,7 @@
                 const savings = cartTotal - discountedTotal;
 
                 useEffect(() => {
-                    lucide.createIcons();
+                    if(typeof lucide !== "undefined") lucide.createIcons();
                 }, [promoApplied, promoError]);
 
                 const PROMO_CODES = {
