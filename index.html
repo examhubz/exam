@@ -819,7 +819,7 @@
                                     )}
                                 </div>
                                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-slate-900 p-2">
-                                    <i data-lucide={isMenuOpen ? "x" : "menu"}></i>
+                                    {isMenuOpen ? <i data-lucide="x"></i> : <i data-lucide="menu"></i>}
                                 </button>
                             </div>
                         </div>
@@ -946,7 +946,7 @@
                                 ].map((item, i) => (
                                     <div key={i} className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 hover:shadow-2xl hover:shadow-blue-600/5 transition-all group">
                                         <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
-                                            <i data-lucide={item.icon} className={`${item.color} w-8 h-8`}></i>
+                                            <span ref={el => { if(el){ el.innerHTML=`<i data-lucide="${item.icon}" class="${item.color} w-8 h-8"></i>`; lucide.createIcons(); } }}></span>
                                         </div>
                                         <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                                         <p className="text-slate-600 leading-relaxed">{item.desc}</p>
